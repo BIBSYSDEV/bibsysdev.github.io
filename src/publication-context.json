@@ -51,9 +51,6 @@
     },
     "day": {
       "@type": "xsd:gDay"
-    },
-    "messages": {
-      "@container": "@list"
     }
   }
 }
