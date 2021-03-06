@@ -28,3 +28,8 @@
 :nextResults a rdf:Property ;
   rdfs:domain :ResultSet ;
   rdfs:comment "The URI that can be used to get the next part of the Result set" .
+
+:processingTime a rdf:Property ;
+  rdfs:domain :ResultSet ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The number of milliseconds taken to process the request" .
