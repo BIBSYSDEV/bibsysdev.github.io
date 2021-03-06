@@ -1,0 +1,30 @@
+@prefix : <http://bibsysdev.github.io/src/search-ontology#> .
+@prefix nva: <http://bibsysdev.github.io/src/nva> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:ResultSet a rdfs:Class ;
+  owl:sameAs schema:SearchResultsPage ;
+  rdfs:comment "A list of results for a given search" .
+
+:size a rdf:Property ;
+  rdfs:domain :ResultSet ;
+  rdfs:range xsd:nonNegativeInteger ;
+  rdfs:comment "The size of the results list" .
+
+:searchString a rdf:Property ;
+  rdfs:domain :ResultSet ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The search string that generated the Result set" .
+
+:hits a rdf:Property ;
+  rdfs:domain :ResultSet ;
+  rdfs:range :Publication ;
+  rdfs:comment "A result returned from the Result set" .
+
+:nextResults a rdf:Property ;
+  rdfs:domain :ResultSet ;
+  rdfs:comment "The URI that can be used to get the next part of the Result set" .
