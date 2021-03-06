@@ -20,7 +20,7 @@
   rdfs:range xsd:string ;
   rdfs:comment "The search string that generated the Result set" .
 
-:hits a rdf:Property ;
+:hit a rdf:Property ;
   rdfs:domain :ResultSet ;
   rdfs:range :Publication ;
   rdfs:comment "A result returned from the Result set" .
