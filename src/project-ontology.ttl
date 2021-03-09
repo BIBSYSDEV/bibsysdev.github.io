@@ -106,13 +106,13 @@
 :contributor a rdf:Property ;
   rdfs:comment "The relationship between a project and a contribution of work to it" ;
   rdfs:domain :Project ;
-  rdfs:range :Contribution .
+  rdfs:range :Contributor .
 
-:Contribution a rdfs:Class ;
-  rdfs:comment "Work delivered under the course of the project" .
+:Contributor a rdfs:Class ;
+  rdfs:comment "A person or organization who delivered under the course of the project" .
 
-:ProjectManagement a rdfs:Class ;
-  rdfs:comment "A delivery of top-level administrative functions in a project" ;
+:ProjectManager a rdfs:Class ;
+  rdfs:comment "A contributor with responsibility for delivery of top-level administrative functions in a project" ;
   rdfs:subClassOf :Contribution .
 
 # this needs aligning with nva, honestly, I don't believe that this is Person, but rather Persona.
