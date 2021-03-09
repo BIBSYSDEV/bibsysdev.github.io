@@ -1,4 +1,4 @@
-@base <http://bibsysdev.github.io/src/project-ontology#> .
+@prefix : <http://bibsysdev.github.io/src/project-ontology#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix nva: <http://bibsysdev.github.io/src/nva> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -8,7 +8,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 :Project a rdfs:Class ;
-  rdfs:comment "An organised effort designed to achieve a particular goal"
+  rdfs:comment "An organised effort designed to achieve a particular goal" ;
   rdfs:subClassOf schema:Project .
 
 :Identifier a rdfs:Class ;
@@ -60,11 +60,11 @@
   rdfs:comment "A source of financial support for a project, a funding stream" .
 
 :Funder a rdfs:Class ;
-  rdfs:subClassOf nva:Organization ;
+  rdfs:subClassOf nva:Organization .
 
 # this is highly problematic
 :grantId a rdf:Property ;
-  rdfs:comment "The unique identifier for a funding stream, relates directly to systems maintained by the funder"
+  rdfs:comment "The unique identifier for a funding stream, relates directly to systems maintained by the funder" ;
   rdfs:domain :FundingStream ;
   rdfs:range xsd:string .
 
