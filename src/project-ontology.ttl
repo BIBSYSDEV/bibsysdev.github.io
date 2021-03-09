@@ -15,7 +15,8 @@
   rdfs:comment "An identifier that uniquely identifies something" .
 
 :CristinIdentifier a rdfs:Class ;
-  rdfs:comment "An identifier that uniquely identifies the type of the domain scope in Cristin" .
+  rdfs:comment "An identifier that uniquely identifies the type of the domain scope in Cristin" ;
+  rdfs:subClassOf :Identifier .
 
 :identifier a rdf:Property ;
   rdfs:comment "Property relating a project to its identifiers" ;
@@ -29,7 +30,7 @@
 
 :title a rdf:Property ;
   rdfs:comment "The name of a thing" ;
-  rdfs:domain :Project, :Funding ;
+  rdfs:domain :Project, :Grant ;
   rdfs:range xsd:string .
 
 :language a rdf:Property ;
@@ -51,21 +52,38 @@
   rdfs:domain :Project, :Contribution ;
   rdfs:range xsd:dateTime .
 
-:funding a rdf:Property ;
+:grant a rdf:Property ;
   rdfs:comment "Relates a project to its source of financial support" ;
   rdfs:domain :Project ;
-  rdfs:range :FundingStream .
+  rdfs:range :Grant .
 
 :FundingStream a rdfs:Class ;
   rdfs:comment "A source of financial support for a project, a funding stream" .
 
+:fundingStream a rdf:Property ;
+  rdfs:comment "Relates a grant to a funding stream" ;
+  rdfs:domain :Grant ;
+  rdfs:range :FundingStream .
+
 :Funder a rdfs:Class ;
   rdfs:subClassOf nva:Organization .
 
-# this is highly problematic
+:Grant a rdfs:Class ;
+  rdfs:comment "A sum of money given to a project to enable the project to meet its goals" ;
+  owl:sameAs <http://bibsysdev.github.io/src/funder-ontology#Project> .
+
+<http://bibsysdev.github.io/src/funder-ontology#Project> a rdfs:Class ;
+  rdfs:comment "We consider funder projects to be synonymous with our grant concept" .
+
 :grantId a rdf:Property ;
-  rdfs:comment "The unique identifier for a funding stream, relates directly to systems maintained by the funder" ;
-  rdfs:domain :FundingStream ;
+  owl:sameAs <http://bibsysdev.github.io/src/funder-ontology#projectId> ;
+  rdfs:comment "The unique identifier of a grant, ideally this should have been an IRI and validated" ;
+  rdfs:domain :Grant ;
+  rdfs:range xsd:string .
+
+<http://bibsysdev.github.io/src/funder-ontology#projectId> a rdf:Property ;
+  rdfs:comment "This is the project ID seen from the perspective of the funder, where a grant for us is a project for them" ;
+  rdfs:domain <http://bibsysdev.github.io/src/funder-ontology#Project> ;
   rdfs:range xsd:string .
 
 :funder a rdf:Property ;
@@ -73,10 +91,10 @@
   rdfs:domain :FundingStream ;
   rdfs:range :Funder .
 
-:validated a rdf:Property ;
-  rdfs:comment "Whether the funder has been validated" ;
-  rdfs:domain :Funder ;
-  rdfs:range xsd:boolean .
+:metadataSource a rdf:Property ;
+  rdfs:comment "Relates a resource to its source of information" ;
+  rdfs:domain :Grant ;
+  rdfs:range xsd:anyURI .
 
 :coordinatingInstitution a rdf:Property ;
   rdfs:comment "The organization with administrative responsibility for the project" ;
