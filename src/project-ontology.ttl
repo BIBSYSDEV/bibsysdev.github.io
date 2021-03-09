@@ -33,7 +33,7 @@
   rdfs:range xsd:string .
 
 :language a rdf:Property ;
-  rdfs:comment "The main language of the project and its outputs" ;
+  rdfs:comment "The main language of the project" ;
   rdfs:domain :Project .
 
 :alternativeTitle a rdf:Property ;
