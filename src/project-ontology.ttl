@@ -106,17 +106,21 @@
 :contributor a rdf:Property ;
   rdfs:comment "The relationship between a project and a contribution of work to it" ;
   rdfs:domain :Project ;
-  rdfs:range :Contributor .
+  rdfs:range :Contributor, :ProjectManager, :ProjectParticipant .
 
 :Contributor a rdfs:Class ;
   rdfs:comment "A person or organization who delivered under the course of the project" .
 
 :ProjectManager a rdfs:Class ;
   rdfs:comment "A contributor with responsibility for delivery of top-level administrative functions in a project" ;
-  rdfs:subClassOf :Contribution .
+  rdfs:subClassOf :Contributor .
+
+:ProjectParticipant a rdfs:Class ;
+  rdfs:comment "A general contributor to a project with no specifically defined project role" ;
+  rdfs:subClassOf :Contributor .
 
 # this needs aligning with nva, honestly, I don't believe that this is Person, but rather Persona.
-:madeBy a rdf:Property ;
+:identity a rdf:Property ;
   rdfs:comment "The individual or group of individuals who made a contribution" ;
   rdfs:domain :Contribution ;
   rdfs:range :Person, nva:Organization .
