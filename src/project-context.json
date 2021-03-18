@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "@vocab": "https://example.org/project-ontology.ttl#",
+    "nva": "http://bibsysdev.github.io/src/nva.ttl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "name": {
+      "@container": "@language"
+    },
+    "endDate": {
+      "@type": "xsd:timestamp"
+    },
+    "startDate": {
+      "@type": "xsd:timestamp"
+    },
+    "contributors": {
+      "@id": "contributor",
+      "@container": "@set"
+    },
+    "language": {
+      "@type": "@id"
+    },
+    "Organization": "nva:Organization"
+  }
+}
