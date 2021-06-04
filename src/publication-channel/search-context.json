@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "@vocab": "http://bibsysdev.github.io/src/search-ontology#",
+    "hits": {
+      "@id": "hit",
+      "@container": "@set"
+    }
+  },
+  "hits": {
+    "@embed": "@always"
+  }
+}
