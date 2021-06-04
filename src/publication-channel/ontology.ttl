@@ -1,0 +1,65 @@
+@prefix : <http://bibsysdev.github.io/src/publication-channel/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Journal a rdfs:Class ;
+  rdfs:description "A periodically published information source" .
+
+:Publisher a rdfs:Class ;
+  rdfs:description "A organization that publishes a information source" .
+
+:identifier a rdf:Property ;
+  rdfs:description "The NSD DBH identifier" ;
+  rdfs:domain :Journal, :Publisher ;
+  rdfs:range xsd:string .
+
+:name a rdf:Property ;
+  rdfs:description "The token identifying the thing" ;
+  rdfs:domain :Journal, :Publisher ;
+  rdfs:range xsd:string .
+
+:onlineIssn a rdf:Property ;
+  rdfs:description "The ISSN identifier associated with the online edition of the journal" ;
+  rdfs:domain :Journal ;
+  rdfs:range xsd:string .
+
+:printIssn  a rdf:Property ;
+  rdfs:description "The ISSN identifier associated with the print edition of the journal" ;
+  rdfs:domain :Journal ;
+  rdfs:range xsd:string .
+
+:openAccess a rdf:Property ;
+  rdfs:description "Whether the journal produces open access content" ;
+  rdfs:domain :Journal ;
+  rdfs:range xsd:boolean .
+
+:language a rdf:Property ;
+  rdfs:description "The primary language used by the journal" ;
+  rdfs:domain :Journal ;
+  rdfs:range xsd:anyURI .
+
+:npiDomain a rdf:Property ;
+  rdfs:description "The area of concern for the journal/publisher" ;
+  rdfs:domain :Journal, :Publisher ;
+  rdfs:range xsd:anyURI .
+
+:website a rdf:Property ;
+  rdfs:description "The website associated with the journal/publisher" ;
+  rdfs:domain :Journal, :Publisher ;
+  rdfs:range xsd:string .
+
+:level a rdf:Property ;
+  rdfs:description "The NPI level associated with the journal " ;
+  rdfs:domain :Journal ;
+  rdfs:range xsd:string .
+
+:publisher a rdf:Property ;
+  rdfs:description "The publisher of the journal" ;
+  rdfs:domain :Journal ;
+  rdfs:range :Publisher .
+
+:active a rdf:Property ;
+  rdfs:description "Whether the journal/publisher is still in operation" ;
+  rdfs:domain :Journal, :Publisher ;
+  rdfs:range xsd:boolean .
