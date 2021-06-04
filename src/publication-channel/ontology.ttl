@@ -30,13 +30,13 @@
   rdfs:range xsd:string .
 
 :openAccess a rdf:Property ;
-  rdfs:description "Whether the journal/publisher produces open access content" ;
-  rdfs:domain :Journal, :Publisher ;
+  rdfs:description "Whether the journal produces open access content" ;
+  rdfs:domain :Journal ;
   rdfs:range xsd:boolean .
 
 :language a rdf:Property ;
-  rdfs:description "The primary language used by the journal/publisher" ;
-  rdfs:domain :Journal, :Publisher ;
+  rdfs:description "The primary language used by the journal" ;
+  rdfs:domain :Journal ;
   rdfs:range xsd:anyURI .
 
 :npiDomain a rdf:Property ;
@@ -50,14 +50,14 @@
   rdfs:range xsd:string .
 
 :level a rdf:Property ;
-  rdfs:description "The intellectual level associated with the journal " ;
+  rdfs:description "The NPI level associated with the journal " ;
   rdfs:domain :Journal ;
   rdfs:range xsd:string .
 
 :publisher a rdf:Property ;
   rdfs:description "The publisher of the journal" ;
   rdfs:domain :Journal ;
-  rdfs:range xsd:anyURI .
+  rdfs:range :Publisher .
 
 :active a rdf:Property ;
   rdfs:description "Whether the journal/publisher is still in operation" ;
