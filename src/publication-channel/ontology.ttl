@@ -40,7 +40,7 @@
   rdfs:range xsd:anyURI .
 
 :npiDomain a rdf:Property ;
-  rdfs:description "The area of concern for the jounral/publisher" ;
+  rdfs:description "The area of concern for the journal/publisher" ;
   rdfs:domain :Journal, :Publisher ;
   rdfs:range xsd:anyURI .
 
