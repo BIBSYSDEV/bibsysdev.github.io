@@ -51,7 +51,7 @@
 
 :level a rdf:Property ;
   rdfs:description "The NPI level associated with the journal " ;
-  rdfs:domain :Journal ;
+  rdfs:domain :Journal, :Publisher ;
   rdfs:range xsd:string .
 
 :publisher a rdf:Property ;
