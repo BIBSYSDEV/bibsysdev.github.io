@@ -44,7 +44,7 @@
 
 :startDate a rdf:Property ;
   rdfs:comment "The point at which something was started" ;
-  rdfs:domain :Project, :Contribution ;
+  rdfs:domain :Project ;
   rdfs:range xsd:dateTime .
 
 :endDate a rdf:Property ;
@@ -69,8 +69,7 @@
   rdfs:subClassOf nva:Organization .
 
 :Grant a rdfs:Class ;
-  rdfs:comment "A sum of money given to a project to enable the project to meet its goals" ;
-  owl:sameAs <http://bibsysdev.github.io/src/funder-ontology#Project> .
+  rdfs:comment "A sum of money given to a project to enable the project to meet its goals" .
 
 <http://bibsysdev.github.io/src/funder-ontology#Project> a rdfs:Class ;
   rdfs:comment "We consider funder projects to be synonymous with our grant concept" .
