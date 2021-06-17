@@ -1,0 +1,134 @@
+@prefix : <http://bibsysdev.github.io/src/project-ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix nva: <http://bibsysdev.github.io/src/nva#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Project a rdfs:Class ;
+  rdfs:comment "An organised effort designed to achieve a particular goal" ;
+  rdfs:subClassOf schema:Project .
+
+:Identifier a rdfs:Class ;
+  rdfs:comment "An identifier that uniquely identifies something" .
+
+:CristinIdentifier a rdfs:Class ;
+  rdfs:comment "An identifier that uniquely identifies the type of the domain scope in Cristin" ;
+  rdfs:subClassOf :Identifier .
+
+:identifier a rdf:Property ;
+  rdfs:comment "Property relating a project to its identifiers" ;
+  rdfs:domain :Project ;
+  rdfs:range :Identifier .
+
+:value a rdf:Property ;
+  rdfs:comment "A value associated with an Identifier" ;
+  rdfs:domain :Identifier ;
+  rdfs:range xsd:string .
+
+:title a rdf:Property ;
+  rdfs:comment "The name of a thing" ;
+  rdfs:domain :Project, :Grant ;
+  rdfs:range xsd:string .
+
+:language a rdf:Property ;
+  rdfs:comment "The main language of the project" ;
+  rdfs:domain :Project .
+
+:alternativeTitle a rdf:Property ;
+  rdfs:comment "An alternative or translated name for a project" ;
+  rdfs:domain :Project ;
+  rdfs:range rdf:langString .
+
+:startDate a rdf:Property ;
+  rdfs:comment "The point at which something was started" ;
+  rdfs:domain :Project ;
+  rdfs:range xsd:dateTime .
+
+:endDate a rdf:Property ;
+  rdfs:comment "The point at which something was terminated" ;
+  rdfs:domain :Project, :Contribution ;
+  rdfs:range xsd:dateTime .
+
+:grant a rdf:Property ;
+  rdfs:comment "Relates a project to its source of financial support" ;
+  rdfs:domain :Project ;
+  rdfs:range :Grant .
+
+:FundingStream a rdfs:Class ;
+  rdfs:comment "A source of financial support for a project, a funding stream" .
+
+:fundingStream a rdf:Property ;
+  rdfs:comment "Relates a grant to a funding stream" ;
+  rdfs:domain :Grant ;
+  rdfs:range :FundingStream .
+
+:Funder a rdfs:Class ;
+  rdfs:subClassOf nva:Organization .
+
+:Grant a rdfs:Class ;
+  rdfs:comment "A sum of money given to a project to enable the project to meet its goals" .
+
+<http://bibsysdev.github.io/src/funder-ontology#Project> a rdfs:Class ;
+  rdfs:comment "We consider funder projects to be synonymous with our grant concept" .
+
+:grantId a rdf:Property ;
+  owl:sameAs <http://bibsysdev.github.io/src/funder-ontology#projectId> ;
+  rdfs:comment "The unique identifier of a grant, ideally this should have been an IRI and validated" ;
+  rdfs:domain :Grant ;
+  rdfs:range xsd:string .
+
+<http://bibsysdev.github.io/src/funder-ontology#projectId> a rdf:Property ;
+  rdfs:comment "This is the project ID seen from the perspective of the funder, where a grant for us is a project for them" ;
+  rdfs:domain <http://bibsysdev.github.io/src/funder-ontology#Project> ;
+  rdfs:range xsd:string .
+
+:funder a rdf:Property ;
+  rdfs:comment "Relates the organization that sourced the funding stream to the funding stream" ;
+  rdfs:domain :FundingStream ;
+  rdfs:range :Funder .
+
+:metadataSource a rdf:Property ;
+  rdfs:comment "Relates a resource to its source of information" ;
+  rdfs:domain :Grant ;
+  rdfs:range xsd:anyURI .
+
+:coordinatingInstitution a rdf:Property ;
+  rdfs:comment "The organization with administrative responsibility for the project" ;
+  rdfs:domain :Project ;
+  rdfs:range nva:Organization .
+
+# Note that we don't talk of "roles" as such here, because we speak of the kind of contribution.
+
+:contributor a rdf:Property ;
+  rdfs:comment "The relationship between a project and a contribution of work to it" ;
+  rdfs:domain :Project ;
+  rdfs:range :Contributor, :ProjectManager, :ProjectParticipant .
+
+:Contributor a rdfs:Class ;
+  rdfs:comment "A person or organization who delivered under the course of the project" .
+
+:ProjectManager a rdfs:Class ;
+  rdfs:comment "A contributor with responsibility for delivery of top-level administrative functions in a project" ;
+  rdfs:subClassOf :Contributor .
+
+:ProjectParticipant a rdfs:Class ;
+  rdfs:comment "A general contributor to a project with no specifically defined project role" ;
+  rdfs:subClassOf :Contributor .
+
+# this needs aligning with nva, honestly, I don't believe that this is Person, but rather Persona.
+:identity a rdf:Property ;
+  rdfs:comment "The individual or group of individuals who made a contribution" ;
+  rdfs:domain :Contribution ;
+  rdfs:range :Person, nva:Organization .
+
+:Person a rdfs:Class ;
+  rdfs:comment "A human individual" ;
+  rdfs:subClassOf foaf:Person, schema:Person .
+
+:affiliation a rdf:Property ;
+  rdfs:comment "The organization on behalf of which a contribution was made" ;
+  rdfs:domain :Contribution ;
+  rdfs:range nva:Organization .
