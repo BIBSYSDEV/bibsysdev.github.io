@@ -1,26 +1,35 @@
 {
   "@context": {
-    "@vocab": "https://example.org/project-ontology.ttl#",
-    "nva": "http://bibsysdev.github.io/src/nva.ttl#",
+    "@vocab": "https://bibsysdev.github.io/src/project-ontology.ttl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "id": "@id",
     "type": "@type",
-    "name": {
+    "alternativeTitles": {
+      "@id": "alternativeTitle",
       "@container": "@language"
     },
-    "endDate": {
-      "@type": "xsd:timestamp"
-    },
-    "startDate": {
-      "@type": "xsd:timestamp"
-    },
-    "contributors": {
-      "@id": "contributor",
+    "identifiers": {
+      "@id": "identifier",
       "@container": "@set"
     },
     "language": {
       "@type": "@id"
     },
-    "Organization": "nva:Organization"
+    "startDate": {
+      "@type": "xsd:dateTime"
+    },
+    "endDate": {
+      "@type": "xsd:dateTime"
+    },
+    "name": {
+      "@container": "@language"
+    },
+    "value": {
+      "@type": "xsd:string"
+    },
+    "contributors": {
+      "@id": "contributor",
+      "@container": "@set"
+    }
   }
 }

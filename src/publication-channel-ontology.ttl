@@ -1,0 +1,70 @@
+@prefix : <http://bibsysdev.github.io/src/project-ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:PublishingChannel a rdfs:Class ;
+  rdfs:description "A venue (organization or publication) that facilitates the dissemination of content to third parties" .
+
+:Publisher a rdfs:Class ;
+  rdfs:subClassOf nva:Organization, :PublishingChannel ;
+  rdfs:description "An organization that is responsible for the distribution of content" .
+
+:Journal a rdfs:Class ;
+  rdfs:subClassOf schema:Periodical ;
+  rdfs:description "A periodical publication" .
+
+:Level a rdfs:Class ;
+  rdfs:description "A descriptor of academic value" .
+
+:NoLevel a rdfs:Class ;
+  rdfs:description "A level of no NPI reporting value" .
+
+:LevelOne a rdfs:Class ;
+  rdfs:description "A lower-level NPI reporting value" .
+
+:LevelTwo a rdfs:Class ;
+  rdfs:description "An upper-level NPI reporting value" .
+
+:name a rdf:Property ;
+  rdfs:subPropertyOf rdfs:label, schema:name ;
+  rdfs:description "The term by which a thing is known" ;
+  rdfs:domain xsd:string .
+
+:onlineIssn a rdf:Property ;
+  rdfs:subPropertyOf bibo:eissn, schema:issn ;
+  rdfs:description "The ISSN for the online edition of a periodical publication" ;
+  rdfs:domain :Journal ;
+  rdfs:range xsd:string .
+
+:printIssn a rdf:Property ;
+  rdfs:subPropertyOf bibo:issn, schema:issn ;
+  rdfs:description "The ISSN for the print edition of a periodical publication" ;
+  rdfs:domain :Journal ;
+  rdfs:range xsd:string .
+
+:active a rdf:Property ;
+  rdfs:description "The activity status of a publication channel" ;
+  rdfs:domain :Journal, :Publisher ;
+  rdfs:range xsd:boolean .
+
+:webpage a rdf:Property ;
+  rdfs:description "The homepage of a publishing channel" ;
+  rdfs:domain :Journal, :Publisher ;
+  rdfs:range xsd:anyURI .
+
+:publisher a rdf:Property ;
+  rdfs:description "The publisher of a periodical publication" ;
+  rdfs:domain :Journal ;
+  rdfs:range :Publisher .
+
+:npiDomain a rdf:Property ;
+  rdfs:subPropertyOf schema:keywords, dcterms:subject ;
+  rdfs:description "The NPI academic domain (e.g. computer science, biology) that the Journal covers"
+  rdfs:domain :Journal ;
+  rdfs:range xsd:string .
+
+:level a rdf:Property ;
+  rdfs:description "The weighting of a publishing channel according to NPI criteria" ;
+  rdfs:domain :Journal, :Publisher ;
+  rdfs:range :Level .

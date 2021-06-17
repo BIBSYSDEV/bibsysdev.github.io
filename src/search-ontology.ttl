@@ -21,12 +21,18 @@
 
 :hit a rdf:Property ;
   rdfs:domain :ResultSet ;
-  rdfs:range :Publication ;
+  rdfs:range :Class ;
   rdfs:comment "A result returned from the Result set" .
 
 :nextResults a rdf:Property ;
   rdfs:domain :ResultSet ;
+  rdfs:range xsd:anyURI ;
   rdfs:comment "The URI that can be used to get the next part of the Result set" .
+
+:previousResults a rdf:Property ;
+  rdfs:domain :ResultSet ;
+  rdfs:range xsd:anyURI ;
+  rdfs:comment "The URI that can be used to get the previous part of the Result set" .
 
 :processingTime a rdf:Property ;
   rdfs:domain :ResultSet ;

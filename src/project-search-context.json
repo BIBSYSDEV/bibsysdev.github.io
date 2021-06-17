@@ -1,40 +1,24 @@
 {
   "@context": {
+    "@vocab": "https://bibsysdev.github.io/src/search-ontology.ttl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
     "id": "@id",
     "type": "@type",
-    "@vocab": "http://bibsysdev.github.io/src/project-ontology#",
-    "search": "http://bibsysdev.github.io/src/search-ontology#",
-    "ResultSet": {
-      "@id": "search:ResultSet"
-    },
     "size": {
-      "@id": "search:size"
-    },
-    "searchString": {
-      "@id": "search:searchString"
-    },
-    "hits": {
-      "@id": "search:hit",
-      "@container": "@set"
-    },
-    "nextResults": {
-      "@id": "search:nextResult"
+      "@type": "xsd:nonNegativeInteger"
     },
     "processingTime": {
-      "@id": "search:processingTime"
+      "@type": "xsd:nonNegativeInteger"
     },
-    "contributors": {
-      "@id": "contributor",
+    "nextResults": {
+      "@type": "@id"
+    },
+    "previousResults": {
+      "@type": "@id"
+    },
+    "hits": {
+      "@id": "hit",
       "@container": "@set"
-    },
-    "startDate": {
-      "@type": "xsd:dateTime"
-    },
-    "endDate": {
-      "@type": "xsd:dateTime"
     }
-  },
-  "hits": {
-    "@embed": "@always"
   }
-}
+},
