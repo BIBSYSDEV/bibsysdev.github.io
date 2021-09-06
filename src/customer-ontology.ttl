@@ -1,0 +1,91 @@
+@prefix : <http://bibsysdev.github.io/src/customer-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Customer-related concepts
+
+:Customer a rdf:Class ;
+  rdfs:comment "Customer institution in NVA" .
+
+:VocabularySetting a rdf:Class ;
+  rdfs:comment "Setting for a controlled vocabulary for a customer institution" .
+
+:VocabularyStatus a rdf:Class ;
+  rdfs:comment "Status for a controlled vocabulary for a customer institution" .
+
+:name a rdf:Property ;
+  rdfs:comment "The name of the customer institution" ;
+  rdfs:domain :Customer ;
+  rdfs:range xsd:string .
+
+:displayName a rdf:Property ;
+  rdfs:comment "The display name of the customer institution" ;
+  rdfs:domain :Customer ;
+  rdfs:range xsd:string .
+
+:shortName a rdf:Property ;
+  rdfs:comment "The shortened name of the customer institution" ;
+  rdfs:domain :Customer ;
+  rdfs:range xsd:string .
+
+:archiveName a rdf:Property ;
+  rdfs:comment "The archive name of the customer institution" ;
+  rdfs:domain :Customer ;
+  rdfs:range xsd:string .
+
+:cname a rdf:Property ;
+  rdfs:comment "The CNAME of the customer institution" ;
+  rdfs:domain :Customer ;
+  rdfs:range xsd:string .
+
+:institutionDns a rdf:Property ;
+  rdfs:comment "The DNS of the customer institution" ;
+  rdfs:domain :Customer ;
+  rdfs:range xsd:string .
+
+:feideOrganizationId a rdf:Property ;
+  rdfs:comment "The Feide organization ID for the customer institution" ;
+  rdfs:domain :Customer ;
+  rdfs:range xsd:string .
+
+:cristinId a rdf:Property ;
+  rdfs:comment "The ID in Cristin for the customer institution" ;
+  rdfs:domain :Customer ;
+  rdfs:range xsd:string .
+
+:vocabularySetting a rdf:Property ;
+  rdfs:comment "" ;
+  rdfs:domain :Customer ;
+  rdfs:range :VocabularySetting .
+
+:name a rdf:Property ;
+  rdfs:comment "The name a controlled vocabulary" ;
+  rdfs:domain :VocabularySetting ;
+  rdfs:range xsd:string .
+
+:id a rdf:Property ;
+  rdfs:comment "The id to controlled vocabulary" ;
+  rdfs:domain :VocabularySetting ;
+  rdfs:range xsd:anyURi .
+
+:status a rdf:Property ;
+  rdfs:comment "The status of a controlled vocabulary" ;
+  rdfs:domain :VocabularySetting ;
+  rdfs:range :VocabularyStatus .
+
+# Dates
+
+:created a rdf:Property ;
+  rdfs:comment "The date and time at which a customer instance was created" ;
+  rdfs:domain :Customer ;
+  rdfs:range xsd:dateTime ;
+  rdfs:subPropertyOf dcterms:created .
+
+:modified a rdf:Property ;
+  rdfs:comment "The date and time at which a customer instance was modified" ;
+  rdfs:domain :Customer ;
+  rdfs:range xsd:dateTime ;
+  rdfs:subPropertyOf dcterms:modified .
