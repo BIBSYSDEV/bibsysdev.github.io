@@ -57,7 +57,7 @@
   rdfs:range xsd:string .
 
 :vocabularySetting a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "Setting for a controlled vocabulary for a customer institution" ;
   rdfs:domain :Customer ;
   rdfs:range :VocabularySetting .
 
