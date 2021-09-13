@@ -1,91 +1,122 @@
-@prefix : <http://bibsysdev.github.io/src/customer-ontology#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix customer: <http://bibsysdev.github.io/src/customer-ontology#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 
-# Customer-related concepts
+customer:Customer a rdfs:Class ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:comment "An institution that is part of the NVA consortium" .
 
-:Customer a rdf:Class ;
-  rdfs:comment "Customer institution in NVA" .
+customer:VocabularySetting a rdfs:Class ;
+  rdfs:comment "A set of customer-defined options defining the allowed usage of a controlled vocabulary" ;
+  rdfs:isDefinedBy customer: .
 
-:VocabularySetting a rdf:Class ;
-  rdfs:comment "Setting for a controlled vocabulary for a customer institution" .
+customer:VocabularyStatus a rdfs:Class ;
+  rdfs:comment "A value denoting whether a controlled vocabulary may be used" ;
+  rdfs:isDefinedBy customer: .
 
-:VocabularyStatus a rdf:Class ;
-  rdfs:comment "Status for a controlled vocabulary for a customer institution" .
+customer:Disabled a rdfs:Class ;
+  rdfs:comment "A value denoting that a controlled vocabulary is not to be used" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:subClassOf customer:VocabularyStatus .
 
-:name a rdf:Property ;
-  rdfs:comment "The name of the customer institution" ;
-  rdfs:domain :Customer ;
+customer:Allowed a rdfs:Class ;
+  rdfs:comment "A value denoting that a controlled vocabulary may be used" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:subClassOf customer:VocabularyStatus .
+
+customer:Default a rdfs:Class ;
+  rdfs:comment "A value denoting that a controlled vocabulary may be used and should be displayed by default" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:subClassOf customer:Allowed .
+
+customer:legalName a rdf:Property ;
+  rdf:label "legalName" ;
+  rdfs:comment "A literal string by which an institution is known in official registers" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:isSubPropertyOf rdfs:label ;
+  rdfs:domain customer:Customer ;
   rdfs:range xsd:string .
 
-:displayName a rdf:Property ;
-  rdfs:comment "The display name of the customer institution" ;
-  rdfs:domain :Customer ;
+customer:displayName a rdf:Property ;
+  rdf:label "displayName" ;
+  rdfs:comment "A literal string to be used when presenting an institution as text to users" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:isSubPropertyOf rdfs:label ;
+  rdfs:domain customer:Customer ;
   rdfs:range xsd:string .
 
-:shortName a rdf:Property ;
-  rdfs:comment "The shortened name of the customer institution" ;
-  rdfs:domain :Customer ;
+customer:shortName a rdf:Property ;
+  rdf:label "shortName" ;
+  rdfs:comment "An abbreviation of an institution name" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:isSubPropertyOf rdfs:label ;
+  rdfs:domain customer:Customer ;
   rdfs:range xsd:string .
 
-:archiveName a rdf:Property ;
-  rdfs:comment "The archive name of the customer institution" ;
-  rdfs:domain :Customer ;
+customer:archiveName a rdf:Property ;
+  rdf:label "archiveName" ;
+  rdfs:comment "A name used when describing the set of data owned by an institution" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:isSubPropertyOf rdfs:label ;
+  rdfs:domain customer:Customer ;
   rdfs:range xsd:string .
 
-:cname a rdf:Property ;
-  rdfs:comment "The CNAME of the customer institution" ;
-  rdfs:domain :Customer ;
+customer:cname a rdf:Property ;
+  rdfs:comment "A Canonical Name (DNS) that should resolve the set of data owned by an institution" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:domain customer:Customer ;
   rdfs:range xsd:string .
 
-:institutionDns a rdf:Property ;
-  rdfs:comment "The DNS of the customer institution" ;
-  rdfs:domain :Customer ;
+customer:institutionDns a rdf:Property ;
+  rdfs:comment "A Domain Name System used by an institution" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:domain customer:Customer ;
   rdfs:range xsd:string .
 
-:feideOrganizationId a rdf:Property ;
-  rdfs:comment "The Feide organization ID for the customer institution" ;
-  rdfs:domain :Customer ;
+customer:feideOrganizationId a rdf:Property ;
+  rdfs:comment "A Feide organization ID of an institution" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:domain customer:Customer ;
   rdfs:range xsd:string .
 
-:cristinId a rdf:Property ;
-  rdfs:comment "The ID in Cristin for the customer institution" ;
-  rdfs:domain :Customer ;
+customer:cristinId a rdf:Property ;
+  rdfs:comment "An identifier in the Cristin organization register associated with an institution" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:domain customer:Customer ;
   rdfs:range xsd:string .
 
-:vocabularySetting a rdf:Property ;
-  rdfs:comment "Setting for a controlled vocabulary for a customer institution" ;
-  rdfs:domain :Customer ;
-  rdfs:range :VocabularySetting .
+customer:vocabularySetting a rdf:Property ;
+  rdfs:comment "A resource defining the usage of a controlled vocabulary" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:domain customer:Customer ;
+  rdfs:range customer:VocabularySetting .
 
-:name a rdf:Property ;
-  rdfs:comment "The name a controlled vocabulary" ;
-  rdfs:domain :VocabularySetting ;
+customer:name a rdf:Property ;
+  rdf:label "name" ;
+  rdfs:comment "A literal string by which a thing is known" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:isSubPropertyOf rdfs:label ;
+  rdfs:domain rdfs:Class ;
   rdfs:range xsd:string .
 
-:id a rdf:Property ;
-  rdfs:comment "The id to controlled vocabulary" ;
-  rdfs:domain :VocabularySetting ;
-  rdfs:range xsd:anyURi .
+customer:vocabularyUsage a rdf:Property ;
+  rdfs:comment "A definition of the allowed usage of a controlled vocabulary" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:domain customer:VocabularySetting ;
+  rdfs:range customer:VocabularyStatus .
 
-:status a rdf:Property ;
-  rdfs:comment "The status of a controlled vocabulary" ;
-  rdfs:domain :VocabularySetting ;
-  rdfs:range :VocabularyStatus .
-
-# Dates
-
-:created a rdf:Property ;
-  rdfs:comment "The date and time at which a customer instance was created" ;
-  rdfs:domain :Customer ;
+customer:created a rdf:Property ;
+  rdfs:comment "A point in time when a resource was first created" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:domain rdfs:Class ;
   rdfs:range xsd:dateTime ;
   rdfs:subPropertyOf dcterms:created .
 
-:modified a rdf:Property ;
-  rdfs:comment "The date and time at which a customer instance was modified" ;
-  rdfs:domain :Customer ;
+customer:modified a rdf:Property ;
+  rdfs:comment "A point in time when a resource was last changed" ;
+  rdfs:isDefinedBy customer: ;
+  rdfs:domain rdfs:Class ;
   rdfs:range xsd:dateTime ;
   rdfs:subPropertyOf dcterms:modified .
