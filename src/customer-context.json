@@ -2,12 +2,26 @@
   "@context": {
     "@vocab": "https://nva.unit.no/customer#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "nva": "https://example.org/todo#",
     "type": "@type",
     "id": "@id",
+    "name": "nva:name",
+    "vocabularySettings": {
+      "@id": "vocabularySetting",
+      "@container": "@set"
+    },
+    "displayName": {
+      "@container": "@language"
+    },
+    "archiveName": {
+      "@container": "@language"
+    },
     "createdDate": {
+      "@id": "nva:created",
       "@type": "xsd:dateTime"
     },
     "modifiedDate": {
+      "@id": "nva:modified",
       "@type": "xsd:dateTime"
     }
   }
