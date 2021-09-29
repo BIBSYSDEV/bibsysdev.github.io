@@ -10,6 +10,18 @@ customer:VocabularySetting a rdfs:Class ;
   rdfs:comment "A set of customer-defined options defining the allowed usage of a controlled vocabulary" ;
   rdfs:isDefinedBy customer: .
 
+customer:CustomerCollection a rdfs:Class ;
+  rdf:label "CustomerCollection" ;
+  rdfs:comment "A collection of organizations that are part of the NVA consortium" ;
+  rdfs:isDefinedBy customer: .
+
+customer:customer a rdf:Property ;
+  rdf:label "customer" ;
+  rdfs:comment "A member organization of the NVA consortium" ;
+  rdfs:domain customer:CustomerCollection ;
+  rdfs:range nva:Organization ;
+  rdfs:isDefinedBy customer: .
+
 customer:Disabled a rdfs:Class ;
   rdf:label "Disabled" ;
   rdfs:comment "A value denoting that a controlled vocabulary is not to be used" ;
@@ -30,7 +42,7 @@ customer:Default a rdfs:Class ;
 
 customer:legalName a rdf:Property ;
   rdf:label "legalName" ;
-  rdfs:comment "A literal string by which an institution is known in official registers" ;
+  rdfs:comment "A literal string by which an organization is known in official registers" ;
   rdfs:isDefinedBy customer: ;
   rdfs:isSubPropertyOf rdfs:label ;
   rdfs:domain nva:Organization ;
@@ -38,7 +50,7 @@ customer:legalName a rdf:Property ;
 
 customer:displayName a rdf:Property ;
   rdf:label "displayName" ;
-  rdfs:comment "A literal string to be used when presenting an institution as text to users" ;
+  rdfs:comment "A literal string to be used when presenting an organization as text to users" ;
   rdfs:isDefinedBy customer: ;
   rdfs:isSubPropertyOf rdfs:label ;
   rdfs:domain nva:Organization ;
@@ -46,7 +58,7 @@ customer:displayName a rdf:Property ;
 
 customer:shortName a rdf:Property ;
   rdf:label "shortName" ;
-  rdfs:comment "An abbreviation of an institution name" ;
+  rdfs:comment "An abbreviation of an organization name" ;
   rdfs:isDefinedBy customer: ;
   rdfs:isSubPropertyOf rdfs:label ;
   rdfs:domain nva:Organization ;
@@ -54,7 +66,7 @@ customer:shortName a rdf:Property ;
 
 customer:archiveName a rdf:Property ;
   rdf:label "archiveName" ;
-  rdfs:comment "A name used when describing the set of data owned by an institution" ;
+  rdfs:comment "A name used when describing the set of data owned by an organization" ;
   rdfs:isDefinedBy customer: ;
   rdfs:isSubPropertyOf rdfs:label ;
   rdfs:domain nva:Organization ;
@@ -62,28 +74,28 @@ customer:archiveName a rdf:Property ;
 
 customer:cname a rdf:Property ;
   rdf:label "cname" ;
-  rdfs:comment "A Canonical Name (DNS) that should resolve the set of data owned by an institution" ;
+  rdfs:comment "A Canonical Name (DNS) that should resolve the set of data owned by an organization" ;
   rdfs:isDefinedBy customer: ;
   rdfs:domain nva:Organization ;
   rdfs:range xsd:string .
 
 customer:institutionDns a rdf:Property ;
   rdf:label "institutionDns" ;
-  rdfs:comment "A Domain Name System used by an institution" ;
+  rdfs:comment "A Domain Name System used by an organization" ;
   rdfs:isDefinedBy customer: ;
   rdfs:domain nva:Organization ;
   rdfs:range xsd:string .
 
 customer:feideOrganizationId a rdf:Property ;
   rdf:label "feideOrganizationId" ;
-  rdfs:comment "A Feide organization ID of an institution" ;
+  rdfs:comment "A Feide organization ID of an organization" ;
   rdfs:isDefinedBy customer: ;
   rdfs:domain nva:Organization ;
   rdfs:range xsd:string .
 
 customer:cristinId a rdf:Property ;
   rdf:label "cristinId" ;
-  rdfs:comment "An identifier in the Cristin organization register associated with an institution" ;
+  rdfs:comment "An identifier in the Cristin organization register associated with an organization" ;
   rdfs:isDefinedBy customer: ;
   rdfs:domain nva:Organization ;
   rdfs:range xsd:string .
