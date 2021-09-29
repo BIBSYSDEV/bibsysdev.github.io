@@ -23,6 +23,13 @@
     "modifiedDate": {
       "@id": "nva:modified",
       "@type": "xsd:dateTime"
+    },
+    "customers": {
+      "@id": "customer:customer",
+      "@container": "@set"
+    },
+    "CustomerList": {
+      "@id": "customer:CustomerCollection"
     }
   }
 }
