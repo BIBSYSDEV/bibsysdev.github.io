@@ -88,7 +88,7 @@ customer:institutionDns a rdf:Property ;
 
 customer:feideOrganizationId a rdf:Property ;
   rdf:label "feideOrganizationId" ;
-  rdfs:comment "A Feide organization ID of an organization" ;
+  rdfs:comment "A Feide ID of an organization" ;
   rdfs:isDefinedBy customer: ;
   rdfs:domain nva:Organization ;
   rdfs:range xsd:string .
