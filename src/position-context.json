@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "nva": "http://bibsysdev.github.io/src/nva.ttl#",
+    "id": "@id",
+    "type": "@type",
+    "name": "nva:name",
+    "enabled": "nva:enabled",
+    "positions": "@graph"
+  }
+}
