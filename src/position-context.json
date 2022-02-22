@@ -1,6 +1,6 @@
 {
   "@context": {
-    "nva": "http://bibsysdev.github.io/src/nva.ttl#",
+    "nva": "https://api.nva.aws.unit.no/ontology/nva#",
     "id": "@id",
     "type": "@type",
     "name": "nva:name",
