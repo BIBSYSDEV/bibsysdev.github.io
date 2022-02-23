@@ -3,7 +3,10 @@
     "nva": "https://api.nva.aws.unit.no/ontology/nva#",
     "id": "@id",
     "type": "@type",
-    "name": "nva:name",
+    "name": {
+      "@id": "nva:name",
+      "@container": "@language"
+    },
     "enabled": "nva:enabled",
     "positions": "@graph"
   }
