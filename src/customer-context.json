@@ -25,11 +25,15 @@
       "@type": "xsd:dateTime"
     },
     "customers": {
-      "@id": "customer:customer",
+      "@id": "customer",
       "@container": "@set"
     },
     "CustomerList": {
-      "@id": "customer:CustomerCollection"
+      "@id": "CustomerCollection"
+    },
+    "publicationWorkflow": {
+      "@id": "publicationWorkflow",
+      "@type": "PublicationWorkflow"
     }
   }
 }
