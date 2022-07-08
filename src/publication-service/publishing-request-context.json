@@ -1,6 +1,6 @@
 {
   "@context": {
-    "@vocab": "https://nva.unit.no/customer#",
+    "@vocab": "https://bibsysdev.github.io/src/publication-service/ontology#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "nva": "https://example.org/todo#",
     "type": "@type",
