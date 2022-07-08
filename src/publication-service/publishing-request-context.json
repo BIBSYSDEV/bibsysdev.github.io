@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "@vocab": "https://nva.unit.no/customer#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "nva": "https://example.org/todo#",
+    "type": "@type",
+    "id": "@id",
+    "name": "nva:name",
+    "messages": {
+      "@id": "message"
+    }
+  }
+}

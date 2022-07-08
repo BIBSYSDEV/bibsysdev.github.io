@@ -1,0 +1,15 @@
+@prefix publicationservice: <http://bibsysdev.github.io/src/publication-service/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+publicationservice:PublishingRequestCase a rdfs:Class ;
+   rdfs:label "PublishingRequestCase" ;
+   rdfs:comment "A support case related to publishing an NVA resource" ;
+   rdfs:isDefinedBy publicationservice: .
+
+publicationservice:message a rdf:Property ;
+    rdfs:label "message" ;
+    rdfs:comment "A message" ;
+    rdfs:domain publicationservice:PublishingRequestCase ;
+    rdfs:range rdf:Resource ;
+    rdfs:isDefinedBy publicationservice: .
