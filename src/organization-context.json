@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "name": {
+      "@id": "nva:name",
+      "@container": "@language"
+    }
+  },
+  "partOf": {
+    "@id": "organization",
+    "@container": "@set"
+  },
+  "hasPart": {
+    "@id": "organization",
+    "@container": "@set"
+  }
+}
