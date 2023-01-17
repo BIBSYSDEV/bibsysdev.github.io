@@ -1,0 +1,31 @@
+@prefix organization: <http://bibsysdev.github.io/src/organization-ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+organization:Organization a rdfs:Class ;
+  rdfs:label "Organization" ;
+  rdfs:comment "An administrative whole or part of a group of people with a common purpose" ;
+  rdfs:isDefinedBy organization: .
+
+organization:name a rdf:Property ;
+  rdfs:label "name" ;
+  rdfs:comment "A token by which a thing is known" ;
+  rdfs:isDefinedBy organization: ;
+  rdfs:domain rdfs:Class ;
+  rdfs:range rdf:langString .
+
+organization:hasPart a rdf:Property ;
+  rdfs:label "hasPart" ;
+  rdfs:comment "A sub-part of an organization" ;
+  rdfs:isDefinedBy organization: ;
+  rdfs:domain organization:Organization ;
+  rdfs:range organization:Organization .
+
+organization:partOf a rdf:Property ;
+  rdfs:label "partOf" ;
+  rdfs:comment "An organization of which the organisation is a sub-part" ;
+  rdfs:isDefinedBy organization: ;
+  rdfs:domain organization:Organization ;
+  rdfs:range organization:Organization .

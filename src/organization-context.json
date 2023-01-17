@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "@vocab": "https://example.org/ontology#",
+    "id": "@id",
+    "type": "@type",
+    "name": {
+      "@container": "@language"
+    },
+    "hasPart": {
+      "@container": "@set"
+    },
+    "partOf": {
+      "@container": "@set"
+    }
+  }
+}
