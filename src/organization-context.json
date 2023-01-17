@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "@vocab": "http://bibsysdev.github.io/src/organization-ontology.ttl#",
+    "id": "@id",
+    "type": "@type",
+    "name": {
+      "@container": "@language"
+    },
+    "hasPart": {
+      "@container": "@set"
+    },
+    "partOf": {
+      "@container": "@set"
+    }
+  }
+}
