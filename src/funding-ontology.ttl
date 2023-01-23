@@ -1,0 +1,78 @@
+@prefix funding: <http://bibsysdev.github.io/src/funding-ontology.ttl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+funding:Funding a rdfs:Class ;
+  rdfs:label "Funding" ;
+  rdfs:comment "A project or an entity that provides funding for something" ;
+  rdfs:isDefinedBy funding: .
+
+funding:MonetaryAmount a rdfs:Class ;
+  rdfs:comment "" ;
+  rdfs:isDefinedBy funding: .
+
+funding:Identifier a rdfs:Class ;
+  rdfs:comment "An identifier that uniquely identifies something" .
+
+funding:amount a rdf:Property ;
+  rdfs:comment "" ;
+  rdfs:label "" ;
+  rdfs:isDefinedBy funding: ;
+  rdfs:domain funding:MonetaryAmount ;
+  rdfs:range xsd:long .
+
+funding:fundingAmount a rdf:Property ;
+  rdfs:comment "" ;
+  rdfs:label "" ;
+  rdfs:isDefinedBy funding: ;
+  rdfs:domain funding:Funding ;
+  rdfs:range funding:MonetaryAmount .
+
+funding:identifier a rdf:Property ;
+  rdfs:comment "Property relating a funding to its identifiers" ;
+  rdfs:domain funding:Funding ;
+  rdfs:range :Identifier .
+
+funding:name a rdf:Property ;
+  rdfs:label "name" ;
+  rdfs:comment "A token by which a thing is known" ;
+  rdfs:isDefinedBy funding: ;
+  rdfs:domain rdfs:Class ;
+  rdfs:range xsd:string .
+
+funding:alternativeName a rdf:Property ;
+  rdfs:comment "" ;
+  rdfs:label "" ;
+  rdfs:isDefinedBy funding: ;
+  rdfs:domain funding:Funding ;
+  rdfs:range rdf:langString .
+
+funding:amount a rdf:Property ;
+  rdfs:comment "" ;
+  rdfs:label "" ;
+  rdfs:isDefinedBy funding: ;
+  rdfs:domain funding:MonetaryAmount ;
+  rdfs:range xsd:long .
+
+funding:currency a rdf:Property ;
+  rdfs:comment "" ;
+  rdfs:label "" ;
+  rdfs:isDefinedBy funding: ;
+  rdfs:domain funding:MonetaryAmount ;
+  rdfs:range xsd:string .
+
+funding:activeFrom a rdf:Property ;
+  rdfs:comment "" ;
+  rdfs:label "" ;
+  rdfs:isDefinedBy funding: ;
+  rdfs:domain funding:Funding ;
+  rdfs:range xsd:dateTime .
+
+funding:activeTo a rdf:Property ;
+  rdfs:comment "" ;
+  rdfs:label "" ;
+  rdfs:isDefinedBy funding: ;
+  rdfs:domain funding:Funding ;
+  rdfs:range xsd:dateTime .
