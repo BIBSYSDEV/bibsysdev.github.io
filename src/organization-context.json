@@ -3,6 +3,7 @@
     "@vocab": "https://bibsysdev.github.io/src/organization-ontology.ttl#",
     "name": "https://bibsysdev.github.io/src/nva/ontology.ttl#name",
     "Organization": "https://bibsysdev.github.io/src/nva/ontology.ttl#Organization",
+    "partOf": "https://bibsysdev.github.io/src/nva/ontology.ttl#partOf",
     "id": "@id",
     "type": "@type",
     "name": {
