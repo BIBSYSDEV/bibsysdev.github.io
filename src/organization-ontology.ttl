@@ -4,11 +4,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-organization:Organization a rdfs:Class ;
-  rdfs:label "Organization" ;
-  rdfs:comment "An administrative whole or part of a group of people with a common purpose" ;
-  rdfs:isDefinedBy organization: .
-
 organization:hasPart a rdf:Property ;
   rdfs:label "hasPart" ;
   rdfs:comment "A sub-part of an organization" ;
