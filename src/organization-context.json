@@ -5,14 +5,14 @@
     "id": "@id",
     "type": "@type",
     "name": {
-      "@id": "https://bibsysdev.github.io/src/nva/ontology.ttl#name"
+      "@id": "https://bibsysdev.github.io/src/nva/ontology.ttl#name",
       "@container": "@language"
     },
     "hasPart": {
       "@container": "@set"
     },
     "partOf": {
-      "@id": "https://bibsysdev.github.io/src/nva/ontology.ttl#partOf"
+      "@id": "https://bibsysdev.github.io/src/nva/ontology.ttl#partOf",
       "@container": "@set"
     }
   }
