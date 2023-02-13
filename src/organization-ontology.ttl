@@ -9,13 +9,6 @@ organization:Organization a rdfs:Class ;
   rdfs:comment "An administrative whole or part of a group of people with a common purpose" ;
   rdfs:isDefinedBy organization: .
 
-organization:name a rdf:Property ;
-  rdfs:label "name" ;
-  rdfs:comment "A token by which a thing is known" ;
-  rdfs:isDefinedBy organization: ;
-  rdfs:domain rdfs:Class ;
-  rdfs:range rdf:langString .
-
 organization:hasPart a rdf:Property ;
   rdfs:label "hasPart" ;
   rdfs:comment "A sub-part of an organization" ;
