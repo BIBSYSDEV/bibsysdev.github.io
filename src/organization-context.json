@@ -1,6 +1,6 @@
 {
   "@context": {
-    "@vocab": "http://bibsysdev.github.io/src/organization-ontology.ttl#",
+    "@vocab": "https://bibsysdev.github.io/src/organization-ontology.ttl#",
     "id": "@id",
     "type": "@type",
     "name": {
