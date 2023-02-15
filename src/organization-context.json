@@ -1,18 +1,18 @@
 {
   "@context": {
-    "@vocab": "https://nva.sikt.no/ontology/publication#",
-    "Organization": "https://bibsysdev.github.io/src/nva/ontology.ttl#Organization",
+    "@vocab": "https://bibsysdev.github.io/src/organization-ontology.ttl#",
+    "Organization": "https://nva.sikt.no/ontology/publication#Organization",
     "id": "@id",
     "type": "@type",
     "name": {
-      "@id": "https://bibsysdev.github.io/src/nva/ontology.ttl#name",
+      "@id": "https://nva.sikt.no/ontology/publication#name",
       "@container": "@language"
     },
     "hasPart": {
       "@container": "@set"
     },
     "partOf": {
-      "@id": "https://bibsysdev.github.io/src/nva/ontology.ttl#partOf",
+      "@id": "https://nva.sikt.no/ontology/publication#partOf",
       "@container": "@set"
     }
   }
