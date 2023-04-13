@@ -12,7 +12,7 @@
       "@container": "@set"
     },
     "labels": {
-      "@id": "label",
+      "@id": "https://nva.sikt.no/ontology/publication#label",
       "@container": "@language"
     },
     "partOf": {
