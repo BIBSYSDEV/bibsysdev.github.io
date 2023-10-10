@@ -9,6 +9,7 @@
       "@container": "@language"
     },
     "hasPart": {
+      "@id": "https://nva.sikt.no/ontology/publication#hasPart",
       "@container": "@set"
     },
     "labels": {
