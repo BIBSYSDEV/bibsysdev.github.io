@@ -1,8 +1,9 @@
 @prefix : <http://bibsysdev.github.io/src/controlled-vocabulary/NorwegianNationalRailAdministration.ttl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 :General a skos:Concept ;
+  dcterms:identifier "General" ;
   skos:prefLabel "Allment om jernbane"@nb ;
   skos:prefLabel "Allment om jernbane"@nn ;
   skos:prefLabel "Railways, General"@en ;
@@ -10,12 +11,14 @@
                  :PlansStrategiesAndInvestigations, :Journals, :PrintedMatter, :ReportsAndStatistics .
 
 :Miscellaneous a skos:Concept ;
+  dcterms:identifier "Miscellaneous" ;
   skos:prefLabel "Diverse (all)"@nb ;
   skos:prefLabel "Ymse"@nn;
   skos:prefLabel "Miscellaneous"@en ;
   skos:broader :General .
 
 :FactsheetsAndBrochures a skos:Concept ;
+  dcterms:identifier "FactsheetsAndBrochures" ;
   skos:prefLabel "Fakta-ark og brosjyrer (all)"@nb ;
   skos:prefLabel "Fakta-ark og brosjyrer (all)"@nn;
   skos:prefLabel "Factsheets and brochures (all)"@en ;
@@ -23,36 +26,42 @@
 
 
 :LawsRulesAndRegulations a skos:Concept ;
+  dcterms:identifier "LawsRulesAndRegulations" ;
   skos:prefLabel "Lover, regelverk og forskrifter"@nb ;
   skos:prefLabel "Lover, regelverk og forskrifter"@nn;
   skos:prefLabel "Laws, rules and regulations"@en ;
   skos:broader :General .
 
 :PlansStrategiesAndInvestigations a skos:Concept ;
+  dcterms:identifier "PlansStrategiesAndInvestigations" ;
   skos:prefLabel "Planer, strategier og utredninger"@nb ;
   skos:prefLabel "Planar, strategiar og utreiinger"@nn;
   skos:prefLabel "Plans, strategies and investigations"@en ;
   skos:broader :General .
 
 :Journals a skos:Concept ;
+  dcterms:identifier "Journals" ;
   skos:prefLabel "Tidsskrifter"@nb ;
   skos:prefLabel "Tisskrift"@nn;
   skos:prefLabel "Journals"@en ;
   skos:broader :General .
 
 :PrintedMatter a skos:Concept ;
+  dcterms:identifier "PrintedMatter" ;
   skos:prefLabel "Trykk"@nb ;
   skos:prefLabel "Trykk"@nn;
   skos:prefLabel "Printed matter"@en ;
   skos:broader :General .
 
 :ReportsAndStatistics a skos:Concept ;
+  dcterms:identifier "ReportsAndStatistics" ;
   skos:prefLabel "Årsmeldinger og statistikk"@nb ;
   skos:prefLabel "Årsmeldinger og statistikk"@nn;
   skos:prefLabel "Reports and statistics"@en ;
   skos:broader :General .
 
 :Banestrekninger a skos:Concept ;
+  dcterms:identifier "Banestrekninger" ;
   skos:prefLabel "Banestrekninger"@nb ;
   skos:prefLabel "Banestrekninger"@nn ;
   skos:prefLabel "Banestrekninger"@en ;
@@ -60,78 +69,91 @@
                 :Nordlandsbanen, :Roerosbanen, :Soerlandsbanen, :Vestfoldbanen, :Oestfoldbanen .
 
 :Bergensbanen a skos:Concept ;
+  dcterms:identifier "Bergensbanen" ;
   skos:prefLabel "Bergensbanen"@nb ;
   skos:prefLabel "Bergensbanen"@nn ;
   skos:prefLabel "Bergensbanen"@en ;
   skos:broader :Banestrekninger .
 
 :Dovrebanen a skos:Concept ;
+  dcterms:identifier "Dovrebanen" ;
   skos:prefLabel "Dovrebanen"@nb ;
   skos:prefLabel "Dovrebanen"@nn ;
   skos:prefLabel "Dovrebanen"@en ;
   skos:broader :Banestrekninger .
 
 :Drammenbanen a skos:Concept ;
+  dcterms:identifier "Drammenbanen" ;
   skos:prefLabel "Drammenbanen"@nb ;
   skos:prefLabel "Drammenbanen"@nn ;
   skos:prefLabel "Drammenbanen"@en ;
   skos:broader :Banestrekninger .
 
 :Gjoevikbanen a skos:Concept ;
+  dcterms:identifier "Gjoevikbanen" ;
   skos:prefLabel "Gjøvikbanen"@nb ;
   skos:prefLabel "Gjøvikbanen"@nn ;
   skos:prefLabel "Gjøvikbanen"@en ;
   skos:broader :Banestrekninger .
 
 :Hovedbanen a skos:Concept ;
+  dcterms:identifier "Hovedbanen" ;
   skos:prefLabel "Hovedbanen"@nb ;
   skos:prefLabel "Hovedbanen"@nn ;
   skos:prefLabel "Hovedbanen"@en ;
   skos:broader :Banestrekninger .
 
 :Nordlandsbanen a skos:Concept ;
+  dcterms:identifier "Nordlandsbanen" ;
   skos:prefLabel "Nordlandsbanen"@nb ;
   skos:prefLabel "Nordlandsbanen"@nn ;
   skos:prefLabel "Nordlandsbanen"@en ;
   skos:broader :Banestrekninger .
 
 :Roerosbanen a skos:Concept ;
+  dcterms:identifier "Roerosbanen" ;
   skos:prefLabel "Rørosbanen"@nb ;
   skos:prefLabel "Rørosbanen"@nn ;
   skos:prefLabel "Rørosbanen"@en ;
   skos:broader :Banestrekninger .
 
 :Soerlandsbanen a skos:Concept ;
+  dcterms:identifier "Soerlandsbanen" ;
   skos:prefLabel "Sørlandsbanen"@nb ;
   skos:prefLabel "Sørlandsbanen"@nn ;
   skos:prefLabel "Sørlandsbanen"@en ;
   skos:broader :Banestrekninger .
 
 :Vestfoldbanen a skos:Concept ;
+  dcterms:identifier "Vestfoldbanen" ;
   skos:prefLabel "Vestfoldbanen"@nb ;
   skos:prefLabel "Vestfoldbanen"@nn ;
   skos:prefLabel "Vestfoldbanen"@en ;
   skos:broader :Banestrekninger .
 
 :Oestfoldbanen a skos:Concept ;
+  dcterms:identifier "Oestfoldbanen" ;
   skos:prefLabel "Østfoldbanen"@nb ;
   skos:prefLabel "Østfoldbanen"@nn ;
   skos:prefLabel "Østfoldbanen"@en ;
   skos:broader :Banestrekninger .
 
 :FreightTransport a skos:Concept ;
+  dcterms:identifier "FreightTransport" ;
   skos:prefLabel "Godstransport"@nb ;
   skos:prefLabel "Godstransport"@nn ;
   skos:prefLabel "Freight transport"@en ;
   skos:narrower :FreightTerminals, :FreightTraffic .
 
 :FreightTerminals a skos:Concept ;
+  dcterms:identifier "FreightTerminals" ;
   skos:prefLabel "Godsterminaler"@nb ;
   skos:prefLabel "Godsterminalar"@nn ;
   skos:prefLabel "Freight terminals"@en ;
   skos:broader :FreightTransport .
 
 :FreightTraffic a skos:Concept ;
+  dcterms:identifier "FreightTraffic" ;
   skos:prefLabel "Godstrafikk"@nb ;
   skos:prefLabel "Godstrafikk"@nn ;
   skos:prefLabel "Freight traffic"@en ;
@@ -139,256 +161,297 @@
 
 
 :HighSpeedTracks a skos:Concept ;
+  dcterms:identifier "HighSpeedTracks" ;
   skos:prefLabel "Høyhastighetsbaner"@nb ;
   skos:prefLabel "Høyhastighetsbaner"@nn ;
   skos:prefLabel "High-speed tracks"@en ;
   skos:narrower :HighSpeedInvestigations, :Intercity .
 
 :HighSpeedInvestigations a skos:Concept ;
+  dcterms:identifier "HighSpeedInvestigations" ;
   skos:prefLabel "Høyhastighetsutredninger"@nb ;
   skos:prefLabel "Høyhastighetsutredninger"@nn ;
   skos:prefLabel "High-speed investigation"@en ;
   skos:broader :HighSpeedTracks .
 
 :Intercity a skos:Concept ;
+  dcterms:identifier "Intercity" ;
   skos:prefLabel "Intercity"@nb ;
   skos:prefLabel "Intercity"@nn ;
   skos:prefLabel "Intercity"@en ;
   skos:broader :HighSpeedTracks .
 
 :Driveway a skos:Concept ;
+  dcterms:identifier "Driveway" ;
   skos:prefLabel "Kjørevegen"@nb ;
   skos:prefLabel "Kjørevegen"@nn ;
   skos:prefLabel "Driveway"@en ;
   skos:narrower :RailwayTechnology, :SignalSystems, :TracksSubAndSuperstructure, :PowerSupply, :Communications .
 
 :RailwayTechnology a skos:Concept ;
-   skos:prefLabel "Jernbaneteknikk (diverse)"@nb ;
-   skos:prefLabel "Jernbaneteknikk (ymse)"@nn ;
-   skos:prefLabel "Railway technology (miscellaneous)"@en ;
-   skos:broader :Driveway .
+  dcterms:identifier "RailwayTechnology" ;
+  skos:prefLabel "Jernbaneteknikk (diverse)"@nb ;
+  skos:prefLabel "Jernbaneteknikk (ymse)"@nn ;
+  skos:prefLabel "Railway technology (miscellaneous)"@en ;
+  skos:broader :Driveway .
 
 :SignalSystems a skos:Concept ;
-   skos:prefLabel "Signalanlegg"@nb ;
-   skos:prefLabel "Signalanlegg"@nn ;
-   skos:prefLabel "Signal systems"@en ;
-   skos:broader :Driveway .
+  dcterms:identifier "SignalSystems" ;
+  skos:prefLabel "Signalanlegg"@nb ;
+  skos:prefLabel "Signalanlegg"@nn ;
+  skos:prefLabel "Signal systems"@en ;
+  skos:broader :Driveway .
 
 :TracksSubAndSuperstructure a skos:Concept ;
-   skos:prefLabel "Sporet; under- og overbygning"@nb ;
-   skos:prefLabel "Sporet; under- og overbygning"@nn ;
-   skos:prefLabel "Tracks; sub- and superstructure"@en ;
-   skos:broader :Driveway .
+  dcterms:identifier "TracksSubAndSuperstructure" ;
+  skos:prefLabel "Sporet; under- og overbygning"@nb ;
+  skos:prefLabel "Sporet; under- og overbygning"@nn ;
+  skos:prefLabel "Tracks; sub- and superstructure"@en ;
+  skos:broader :Driveway .
 
 :PowerSupply a skos:Concept ;
-   skos:prefLabel "Strømforsyning"@nb ;
-   skos:prefLabel "Strømforsyning"@nn ;
-   skos:prefLabel "Power supply"@en ;
-   skos:broader :Driveway .
+  dcterms:identifier "PowerSupply" ;
+  skos:prefLabel "Strømforsyning"@nb ;
+  skos:prefLabel "Strømforsyning"@nn ;
+  skos:prefLabel "Power supply"@en ;
+  skos:broader :Driveway .
 
 :Communications a skos:Concept ;
-   skos:prefLabel "Tele og data"@nb ;
-   skos:prefLabel "Tele og data"@nn ;
-   skos:prefLabel "Communications"@en ;
-   skos:broader :Driveway .
+  dcterms:identifier "Communications" ;
+  skos:prefLabel "Tele og data"@nb ;
+  skos:prefLabel "Tele og data"@nn ;
+  skos:prefLabel "Communications"@en ;
+  skos:broader :Driveway .
 
 
 :NatureAndEnvironment a skos:Concept ;
+  dcterms:identifier "NatureAndEnvironment" ;
   skos:prefLabel "Natur og miljø"@nb ;
   skos:prefLabel "Natur og miljø"@nn ;
   skos:prefLabel "NatureAndEnvironment"@en ;
   skos:narrower :FloraAndFauna, :Pollution, :Geosciences, :EnvironmentalReports, :Noise .
 
 :FloraAndFauna a skos:Concept ;
-   skos:prefLabel "Fauna og flora"@nb ;
-   skos:prefLabel "Fauna og flora"@nn ;
-   skos:prefLabel "Flora and fauna"@en ;
-   skos:broader :NatureAndEnvironment .
+  dcterms:identifier "FloraAndFauna" ;
+  skos:prefLabel "Fauna og flora"@nb ;
+  skos:prefLabel "Fauna og flora"@nn ;
+  skos:prefLabel "Flora and fauna"@en ;
+  skos:broader :NatureAndEnvironment .
 
 :Pollution a skos:Concept ;
-   skos:prefLabel "Forurensning"@nb ;
-   skos:prefLabel "Forureining"@nn ;
-   skos:prefLabel "Pollution"@en ;
-   skos:broader :NatureAndEnvironment .
+  dcterms:identifier "Pollution" ;
+  skos:prefLabel "Forurensning"@nb ;
+  skos:prefLabel "Forureining"@nn ;
+  skos:prefLabel "Pollution"@en ;
+  skos:broader :NatureAndEnvironment .
 
 :Geosciences a skos:Concept ;
-   skos:prefLabel "Geovitenskaper"@nb ;
-   skos:prefLabel "Geovitskap"@nn ;
-   skos:prefLabel "Geosciences"@en ;
-   skos:broader :NatureAndEnvironment .
+  dcterms:identifier "Geosciences" ;
+  skos:prefLabel "Geovitenskaper"@nb ;
+  skos:prefLabel "Geovitskap"@nn ;
+  skos:prefLabel "Geosciences"@en ;
+  skos:broader :NatureAndEnvironment .
 
 :EnvironmentalReports a skos:Concept ;
-   skos:prefLabel "Miljørapporter"@nb ;
-   skos:prefLabel "Miljørapportar"@nn ;
-   skos:prefLabel "Environmental reports"@en ;
-   skos:broader :NatureAndEnvironment .
+  dcterms:identifier "EnvironmentalReports" ;
+  skos:prefLabel "Miljørapporter"@nb ;
+  skos:prefLabel "Miljørapportar"@nn ;
+  skos:prefLabel "Environmental reports"@en ;
+  skos:broader :NatureAndEnvironment .
 
 :Noise a skos:Concept ;
-   skos:prefLabel "Støy"@nb ;
-   skos:prefLabel "Støy"@nn ;
-   skos:prefLabel "Noise"@en ;
-   skos:broader :NatureAndEnvironment .
+  dcterms:identifier "Noise" ;
+  skos:prefLabel "Støy"@nb ;
+  skos:prefLabel "Støy"@nn ;
+  skos:prefLabel "Noise"@en ;
+  skos:broader :NatureAndEnvironment .
 
 :RollingStock a skos:Concept ;
+  dcterms:identifier "RollingStock" ;
   skos:prefLabel "Rullende materiell"@nb ;
   skos:prefLabel "Rullende materiell"@nn ;
   skos:prefLabel "RollingStock"@en ;
   skos:narrower :Locomotives, :PassengerAndFreightCarriages, :MaintenanceAndWorkshops .
 
 :Locomotives a skos:Concept ;
-   skos:prefLabel "Lokomotiver"@nb ;
-   skos:prefLabel "Lokomotiv"@nn ;
-   skos:prefLabel "Locomotives"@en ;
-   skos:broader :RollingStock .
+  dcterms:identifier "Locomotives" ;
+  skos:prefLabel "Lokomotiver"@nb ;
+  skos:prefLabel "Lokomotiv"@nn ;
+  skos:prefLabel "Locomotives"@en ;
+  skos:broader :RollingStock .
 
 :PassengerAndFreightCarriages a skos:Concept ;
-   skos:prefLabel "Person- og godsvogner"@nb ;
-   skos:prefLabel "Person- og godsvagnar"@nn ;
-   skos:prefLabel "Passenger and freight carriages"@en ;
-   skos:broader :RollingStock .
+  dcterms:identifier "PassengerAndFreightCarriages" ;
+  skos:prefLabel "Person- og godsvogner"@nb ;
+  skos:prefLabel "Person- og godsvagnar"@nn ;
+  skos:prefLabel "Passenger and freight carriages"@en ;
+  skos:broader :RollingStock .
 
 :MaintenanceAndWorkshops a skos:Concept ;
-   skos:prefLabel "Vedlikehold og verksteder"@nb ;
-   skos:prefLabel "Vedlikehald og verkstadar"@nn ;
-   skos:prefLabel "Maintenance and workshops"@en ;
-   skos:broader :RollingStock .
+  dcterms:identifier "MaintenanceAndWorkshops" ;
+  skos:prefLabel "Vedlikehold og verksteder"@nb ;
+  skos:prefLabel "Vedlikehald og verkstadar"@nn ;
+  skos:prefLabel "Maintenance and workshops"@en ;
+  skos:broader :RollingStock .
 
 :ParliamentaryNegotiations a skos:Concept ;
+  dcterms:identifier "ParliamentaryNegotiations" ;
   skos:prefLabel "Stortingsforhandlinger"@nb ;
   skos:prefLabel "Stortingsforhandlinger"@nn ;
   skos:prefLabel "Parliamentary negotiations"@en ;
   skos:narrower :2013_2014, :2014_2015, :2015_2016, :2016_2017 .
 
 :2013_2014 a skos:Concept ;
-   skos:prefLabel "2013–2014"@nb ;
-   skos:prefLabel "2013–2014"@nn ;
-   skos:prefLabel "2013–2014"@en ;
-   skos:broader :ParliamentaryNegotiations .
+  dcterms:identifier "2013_2014" ;
+  skos:prefLabel "2013–2014"@nb ;
+  skos:prefLabel "2013–2014"@nn ;
+  skos:prefLabel "2013–2014"@en ;
+  skos:broader :ParliamentaryNegotiations .
 
 :2014_2015 a skos:Concept ;
-   skos:prefLabel "2014–2015"@nb ;
-   skos:prefLabel "2014–2015"@nn ;
-   skos:prefLabel "2014–2015"@en ;
-   skos:broader :ParliamentaryNegotiations .
+  dcterms:identifier "2014_2015" ;
+  skos:prefLabel "2014–2015"@nb ;
+  skos:prefLabel "2014–2015"@nn ;
+  skos:prefLabel "2014–2015"@en ;
+  skos:broader :ParliamentaryNegotiations .
 
 :2015_2016 a skos:Concept ;
-   skos:prefLabel "2015–2016"@nb ;
-   skos:prefLabel "2015–2016"@nn ;
-   skos:prefLabel "2015–2016"@en ;
-   skos:broader :ParliamentaryNegotiations .
+  dcterms:identifier "2015_2016" ;
+  skos:prefLabel "2015–2016"@nb ;
+  skos:prefLabel "2015–2016"@nn ;
+  skos:prefLabel "2015–2016"@en ;
+  skos:broader :ParliamentaryNegotiations .
 
 :2016_2017 a skos:Concept ;
-   skos:prefLabel "2016–2017"@nb ;
-   skos:prefLabel "2016–2017"@nn ;
-   skos:prefLabel "2016–2017"@en ;
-   skos:broader :ParliamentaryNegotiations .
+  dcterms:identifier "2016_2017" ;
+  skos:prefLabel "2016–2017"@nb ;
+  skos:prefLabel "2016–2017"@nn ;
+  skos:prefLabel "2016–2017"@en ;
+  skos:broader :ParliamentaryNegotiations .
 
 :TariffProtocols a skos:Concept ;
+  dcterms:identifier "TariffProtocols" ;
   skos:prefLabel "Takstprotokoller"@nb ;
   skos:prefLabel "Takstprotokollar"@nn ;
   skos:prefLabel "Tariff protocols"@en ;
   skos:narrower :TariffProtocol_Bergensbanen_Randsfjordbanen_1863_1921,
                 :TariffProtocol_Dovrebanen_Hamar_Selbanen_Otta_Dombaasbanen_Raumabanen_1891_1950,
                 :TariffProtocol_Dovrebanen_Hovedbanen_Christiania_Eidsvold_1854_1960,
-                :TariffProtocol_Drammenbanen_Kristiania-Drammen_1870_1986,
+                :TariffProtocol_Drammenbanen_Kristiania_Drammen_1870_1986,
                 :TariffProtocol_Gjoevikbanen_Valdresbanen_Eina_Fagernes_Alnabanen_1896_1960,
-                :TariffProtocol_Kongsvingerbanen_Soloerbanen_Kongsvinger_Flisenbanen_Flisen-Elverumsbanen,
+                :TariffProtocol_Kongsvingerbanen_Soloerbanen_Kongsvinger_Flisenbanen_Flisen_Elverumsbanen,
                 :TariffProtocol_Roerosbanen_i_Hedmark_amt_fylke_og_i_Akershus_Hamar_Elverum_Jernbanen_1858_2008,
                 :TariffProtocol_Soerlandsbanen_Vestfoldbanen_Randsfjordbanen_Hokksund_Kongsberg_1870_1951,
                 :TariffProtocol_Oestfoldbanen_Sydbanen_Smaalensbanen_Oestre_linie_1874_1989 .
 
 :TariffProtocol_Bergensbanen_Randsfjordbanen_1863_1921 a skos:Concept ;
-   skos:prefLabel "Bergensbanen. Randsfjordbanen. 1863-1921"@nb ;
-   skos:prefLabel "Bergensbanen. Randsfjordbanen. 1863-1921"@nn ;
-   skos:prefLabel "Bergensbanen. Randsfjordbanen. 1863-1921"@en ;
-   skos:broader :TariffProtocols .
+  dcterms:identifier "TariffProtocol_Bergensbanen_Randsfjordbanen_1863_1921" ;
+  skos:prefLabel "Bergensbanen. Randsfjordbanen. 1863-1921"@nb ;
+  skos:prefLabel "Bergensbanen. Randsfjordbanen. 1863-1921"@nn ;
+  skos:prefLabel "Bergensbanen. Randsfjordbanen. 1863-1921"@en ;
+  skos:broader :TariffProtocols .
 
 :TariffProtocol_Dovrebanen_Hamar_Selbanen_Otta_Dombaasbanen_Raumabanen_1891_1950 a skos:Concept ;
-   skos:prefLabel "Dovrebanen. Hamar-Selbanen. Otta-Dombåsbanen. Raumabanen. 1891-1950"@nb ;
-   skos:prefLabel "Dovrebanen. Hamar-Selbanen. Otta-Dombåsbanen. Raumabanen. 1891-1950"@nn ;
-   skos:prefLabel "Dovrebanen. Hamar-Selbanen. Otta-Dombåsbanen. Raumabanen. 1891-1950"@en ;
-   skos:broader :TariffProtocols .
+  dcterms:identifier "TariffProtocol_Dovrebanen_Hamar_Selbanen_Otta_Dombaasbanen_Raumabanen_1891_1950" ;
+  skos:prefLabel "Dovrebanen. Hamar-Selbanen. Otta-Dombåsbanen. Raumabanen. 1891-1950"@nb ;
+  skos:prefLabel "Dovrebanen. Hamar-Selbanen. Otta-Dombåsbanen. Raumabanen. 1891-1950"@nn ;
+  skos:prefLabel "Dovrebanen. Hamar-Selbanen. Otta-Dombåsbanen. Raumabanen. 1891-1950"@en ;
+  skos:broader :TariffProtocols .
 
 :TariffProtocol_Dovrebanen_Hovedbanen_Christiania_Eidsvold_1854_1960 a skos:Concept ;
-   skos:prefLabel "Dovrebanen. Hovedbanen (Christiania - Eidsvold). 1854-1960"@nb ;
-   skos:prefLabel "Dovrebanen. Hovedbanen (Christiania - Eidsvold). 1854-1960"@nn ;
-   skos:prefLabel "Dovrebanen. Hovedbanen (Christiania - Eidsvold). 1854-1960"@en ;
-   skos:broader :TariffProtocols .
+  dcterms:identifier "TariffProtocol_Dovrebanen_Hovedbanen_Christiania_Eidsvold_1854_1960" ;
+  skos:prefLabel "Dovrebanen. Hovedbanen (Christiania - Eidsvold). 1854-1960"@nb ;
+  skos:prefLabel "Dovrebanen. Hovedbanen (Christiania - Eidsvold). 1854-1960"@nn ;
+  skos:prefLabel "Dovrebanen. Hovedbanen (Christiania - Eidsvold). 1854-1960"@en ;
+  skos:broader :TariffProtocols .
 
-:TariffProtocol_Drammenbanen_Kristiania-Drammen_1870_1986  a skos:Concept ;
-   skos:prefLabel "Drammenbanen (Kristiania-Drammen). 1870-1986"@nb ;
-   skos:prefLabel "Drammenbanen (Kristiania-Drammen). 1870-1986"@nn ;
-   skos:prefLabel "Drammenbanen (Kristiania-Drammen). 1870-1986"@en ;
-   skos:broader :TariffProtocols .
+:TariffProtocol_Drammenbanen_Kristiania_Drammen_1870_1986 a skos:Concept ;
+  dcterms:identifier "TariffProtocol_Drammenbanen_Kristiania_Drammen_1870_1986" ;
+  skos:prefLabel "Drammenbanen (Kristiania-Drammen). 1870-1986"@nb ;
+  skos:prefLabel "Drammenbanen (Kristiania-Drammen). 1870-1986"@nn ;
+  skos:prefLabel "Drammenbanen (Kristiania-Drammen). 1870-1986"@en ;
+  skos:broader :TariffProtocols .
 
-:TariffProtocol_Gjoevikbanen_Valdresbanen_Eina_Fagernes_Alnabanen_1896_1960  a skos:Concept ;
-   skos:prefLabel "Gjøvikbanen. Valdresbanen (Eina-Fagernes). Alnabanen. 1896-1960 (Inkluderer: Forbindelsen Roa-Hønefoss (Bergensbanen østenfjelds). Røykenvikbanen, Skreiabanen (Reinsvollbanen))"@nb ;
-   skos:prefLabel "Gjøvikbanen. Valdresbanen (Eina-Fagernes). Alnabanen. 1896-1960 (Inkluderer: Forbindelsen Roa-Hønefoss (Bergensbanen østenfjelds). Røykenvikbanen, Skreiabanen (Reinsvollbanen))"@nn ;
-   skos:prefLabel "Gjøvikbanen. Valdresbanen (Eina-Fagernes). Alnabanen. 1896-1960 (Inkluderer: Forbindelsen Roa-Hønefoss (Bergensbanen østenfjelds). Røykenvikbanen, Skreiabanen (Reinsvollbanen))"@en ;
-   skos:broader :TariffProtocols .
+:TariffProtocol_Gjoevikbanen_Valdresbanen_Eina_Fagernes_Alnabanen_1896_1960 a skos:Concept ;
+  dcterms:identifier "TariffProtocol_Gjoevikbanen_Valdresbanen_Eina_Fagernes_Alnabanen_1896_1960" ;
+  skos:prefLabel "Gjøvikbanen. Valdresbanen (Eina-Fagernes). Alnabanen. 1896-1960 (Inkluderer: Forbindelsen Roa-Hønefoss (Bergensbanen østenfjelds). Røykenvikbanen, Skreiabanen (Reinsvollbanen))"@nb ;
+  skos:prefLabel "Gjøvikbanen. Valdresbanen (Eina-Fagernes). Alnabanen. 1896-1960 (Inkluderer: Forbindelsen Roa-Hønefoss (Bergensbanen østenfjelds). Røykenvikbanen, Skreiabanen (Reinsvollbanen))"@nn ;
+  skos:prefLabel "Gjøvikbanen. Valdresbanen (Eina-Fagernes). Alnabanen. 1896-1960 (Inkluderer: Forbindelsen Roa-Hønefoss (Bergensbanen østenfjelds). Røykenvikbanen, Skreiabanen (Reinsvollbanen))"@en ;
+  skos:broader :TariffProtocols .
 
-:TariffProtocol_Kongsvingerbanen_Soloerbanen_Kongsvinger_Flisenbanen_Flisen-Elverumsbanen a skos:Concept ;
-   skos:prefLabel "Kongsvingerbanen.Solørbanen (Kongsvinger-Flisenbanen, Flisen-Elverumsbanen) 1858-1974 (Inkluderer: Vestmarkalinjen (Skotterud-Vestmarka). Urskog-Hølandsbanen)"@nb ;
-   skos:prefLabel "Kongsvingerbanen.Solørbanen (Kongsvinger-Flisenbanen, Flisen-Elverumsbanen) 1858-1974 (Inkluderer: Vestmarkalinjen (Skotterud-Vestmarka). Urskog-Hølandsbanen)"@nn ;
-   skos:prefLabel "Kongsvingerbanen.Solørbanen (Kongsvinger-Flisenbanen, Flisen-Elverumsbanen) 1858-1974 (Inkluderer: Vestmarkalinjen (Skotterud-Vestmarka). Urskog-Hølandsbanen)"@en ;
-   skos:broader :TariffProtocols .
+:TariffProtocol_Kongsvingerbanen_Soloerbanen_Kongsvinger_Flisenbanen_Flisen_Elverumsbanen a skos:Concept ;
+  dcterms:identifier "TariffProtocol_Kongsvingerbanen_Soloerbanen_Kongsvinger_Flisenbanen_Flisen_Elverumsbanen" ;
+  skos:prefLabel "Kongsvingerbanen.Solørbanen (Kongsvinger-Flisenbanen, Flisen-Elverumsbanen) 1858-1974 (Inkluderer: Vestmarkalinjen (Skotterud-Vestmarka). Urskog-Hølandsbanen)"@nb ;
+  skos:prefLabel "Kongsvingerbanen.Solørbanen (Kongsvinger-Flisenbanen, Flisen-Elverumsbanen) 1858-1974 (Inkluderer: Vestmarkalinjen (Skotterud-Vestmarka). Urskog-Hølandsbanen)"@nn ;
+  skos:prefLabel "Kongsvingerbanen.Solørbanen (Kongsvinger-Flisenbanen, Flisen-Elverumsbanen) 1858-1974 (Inkluderer: Vestmarkalinjen (Skotterud-Vestmarka). Urskog-Hølandsbanen)"@en ;
+  skos:broader :TariffProtocols .
 
 :TariffProtocol_Roerosbanen_i_Hedmark_amt_fylke_og_i_Akershus_Hamar_Elverum_Jernbanen_1858_2008 a skos:Concept ;
-   skos:prefLabel "Rørosbanen i Hedmark amt/fylke og i Akershus. Hamar-Elverum-Jernbanen, 1858-2008 (Inkluderer: Grundset-Aamot Jernbanen, Støren-Aamot Jernbaneanlæg, Hamar-Eidsvoldbanen (Hedemarksbanen))"@nb ;
-   skos:prefLabel "Rørosbanen i Hedmark amt/fylke og i Akershus. Hamar-Elverum-Jernbanen, 1858-2008 (Inkluderer: Grundset-Aamot Jernbanen, Støren-Aamot Jernbaneanlæg, Hamar-Eidsvoldbanen (Hedemarksbanen))"@nn ;
-   skos:prefLabel "Rørosbanen i Hedmark amt/fylke og i Akershus. Hamar-Elverum-Jernbanen, 1858-2008 (Inkluderer: Grundset-Aamot Jernbanen, Støren-Aamot Jernbaneanlæg, Hamar-Eidsvoldbanen (Hedemarksbanen))"@en ;
-   skos:broader :TariffProtocols .
+  dcterms:identifier "TariffProtocol_Roerosbanen_i_Hedmark_amt_fylke_og_i_Akershus_Hamar_Elverum_Jernbanen_1858_2008" ;
+  skos:prefLabel "Rørosbanen i Hedmark amt/fylke og i Akershus. Hamar-Elverum-Jernbanen, 1858-2008 (Inkluderer: Grundset-Aamot Jernbanen, Støren-Aamot Jernbaneanlæg, Hamar-Eidsvoldbanen (Hedemarksbanen))"@nb ;
+  skos:prefLabel "Rørosbanen i Hedmark amt/fylke og i Akershus. Hamar-Elverum-Jernbanen, 1858-2008 (Inkluderer: Grundset-Aamot Jernbanen, Støren-Aamot Jernbaneanlæg, Hamar-Eidsvoldbanen (Hedemarksbanen))"@nn ;
+  skos:prefLabel "Rørosbanen i Hedmark amt/fylke og i Akershus. Hamar-Elverum-Jernbanen, 1858-2008 (Inkluderer: Grundset-Aamot Jernbanen, Støren-Aamot Jernbaneanlæg, Hamar-Eidsvoldbanen (Hedemarksbanen))"@en ;
+  skos:broader :TariffProtocols .
 
-:TariffProtocol_Soerlandsbanen_Vestfoldbanen_Randsfjordbanen_Hokksund_Kongsberg_1870_1951  a skos:Concept ;
-   skos:prefLabel "Sørlandsbanen. Vestfoldbanen. Randsfjordbanen (Hokksund-Kongsberg). 1870-1951 (Inkluderer: Bratsbergbanen (Nordagutu-Porsgrunn))"@nb ;
-   skos:prefLabel "Sørlandsbanen. Vestfoldbanen. Randsfjordbanen (Hokksund-Kongsberg). 1870-1951 (Inkluderer: Bratsbergbanen (Nordagutu-Porsgrunn))"@nn ;
-   skos:prefLabel "Sørlandsbanen. Vestfoldbanen. Randsfjordbanen (Hokksund-Kongsberg). 1870-1951 (Inkluderer: Bratsbergbanen (Nordagutu-Porsgrunn))"@en ;
-   skos:broader :TariffProtocols .
+:TariffProtocol_Soerlandsbanen_Vestfoldbanen_Randsfjordbanen_Hokksund_Kongsberg_1870_1951 a skos:Concept ;
+  dcterms:identifier "TariffProtocol_Soerlandsbanen_Vestfoldbanen_Randsfjordbanen_Hokksund_Kongsberg_1870_1951" ;
+  skos:prefLabel "Sørlandsbanen. Vestfoldbanen. Randsfjordbanen (Hokksund-Kongsberg). 1870-1951 (Inkluderer: Bratsbergbanen (Nordagutu-Porsgrunn))"@nb ;
+  skos:prefLabel "Sørlandsbanen. Vestfoldbanen. Randsfjordbanen (Hokksund-Kongsberg). 1870-1951 (Inkluderer: Bratsbergbanen (Nordagutu-Porsgrunn))"@nn ;
+  skos:prefLabel "Sørlandsbanen. Vestfoldbanen. Randsfjordbanen (Hokksund-Kongsberg). 1870-1951 (Inkluderer: Bratsbergbanen (Nordagutu-Porsgrunn))"@en ;
+  skos:broader :TariffProtocols .
 
 :TariffProtocol_Oestfoldbanen_Sydbanen_Smaalensbanen_Oestre_linie_1874_1989 a skos:Concept ;
-   skos:prefLabel "Østfoldbanen (Sydbanen, Smaalensbanen, Østre linie). 1874-1989"@nb ;
-   skos:prefLabel "Østfoldbanen (Sydbanen, Smaalensbanen, Østre linie). 1874-1989"@nn ;
-   skos:prefLabel "Østfoldbanen (Sydbanen, Smaalensbanen, Østre linie). 1874-1989"@en ;
-   skos:broader :TariffProtocols .
+  dcterms:identifier "TariffProtocol_Oestfoldbanen_Sydbanen_Smaalensbanen_Oestre_linie_1874_1989" ;
+  skos:prefLabel "Østfoldbanen (Sydbanen, Smaalensbanen, Østre linie). 1874-1989"@nb ;
+  skos:prefLabel "Østfoldbanen (Sydbanen, Smaalensbanen, Østre linie). 1874-1989"@nn ;
+  skos:prefLabel "Østfoldbanen (Sydbanen, Smaalensbanen, Østre linie). 1874-1989"@en ;
+  skos:broader :TariffProtocols .
 
 :Traffic a skos:Concept ;
+  dcterms:identifier "Traffic" ;
   skos:prefLabel "Trafikk"@nb ;
   skos:prefLabel "Trafikk"@nn ;
   skos:prefLabel "Traffic"@en ;
   skos:narrower :Capacity, :Customers, :NetworkStatement, :Punctuality, :Timetables, :Safety .
 
 :Capacity a skos:Concept ;
-   skos:prefLabel "Kapasitet"@nb ;
-   skos:prefLabel "Kapasitet"@nn ;
-   skos:prefLabel "Capacity"@en ;
-   skos:broader :Traffic .
+  dcterms:identifier "Capacity" ;
+  skos:prefLabel "Kapasitet"@nb ;
+  skos:prefLabel "Kapasitet"@nn ;
+  skos:prefLabel "Capacity"@en ;
+  skos:broader :Traffic .
 
 :Customers a skos:Concept ;
-   skos:prefLabel "Kunder"@nb ;
-   skos:prefLabel "Kunder"@nn ;
-   skos:prefLabel "Customers"@en ;
-   skos:broader :Traffic .
+  dcterms:identifier "Customers" ;
+  skos:prefLabel "Kunder"@nb ;
+  skos:prefLabel "Kunder"@nn ;
+  skos:prefLabel "Customers"@en ;
+  skos:broader :Traffic .
 
 :NetworkStatement a skos:Concept ;
-   skos:prefLabel "Network Statement"@nb ;
-   skos:prefLabel "Network Statement"@nn ;
-   skos:prefLabel "Network Statement"@en ;
-   skos:broader :Traffic .
+  dcterms:identifier "NetworkStatement" ;
+  skos:prefLabel "Network Statement"@nb ;
+  skos:prefLabel "Network Statement"@nn ;
+  skos:prefLabel "Network Statement"@en ;
+  skos:broader :Traffic .
 
 :Punctuality a skos:Concept ;
-   skos:prefLabel "Punktlighet"@nb ;
-   skos:prefLabel "Punktlighet"@nn ;
-   skos:prefLabel "Punctuality"@en ;
-   skos:broader :Traffic .
+  dcterms:identifier "Punctuality" ;
+  skos:prefLabel "Punktlighet"@nb ;
+  skos:prefLabel "Punktlighet"@nn ;
+  skos:prefLabel "Punctuality"@en ;
+  skos:broader :Traffic .
 
 :Timetables a skos:Concept ;
-   skos:prefLabel "Rutetabeller"@nb ;
-   skos:prefLabel "Rutetabellar"@nn ;
-   skos:prefLabel "Timetables"@en ;
-   skos:broader :Traffic .
+  dcterms:identifier "Timetables" ;
+  skos:prefLabel "Rutetabeller"@nb ;
+  skos:prefLabel "Rutetabellar"@nn ;
+  skos:prefLabel "Timetables"@en ;
+  skos:broader :Traffic .
 
 :Safety a skos:Concept ;
-   skos:prefLabel "Sikkerhet"@nb ;
-   skos:prefLabel "Tryggleik"@nn ;
-   skos:prefLabel "Safety"@en ;
-   skos:broader :Traffic .
+  dcterms:identifier "Safety" ;
+  skos:prefLabel "Sikkerhet"@nb ;
+  skos:prefLabel "Tryggleik"@nn ;
+  skos:prefLabel "Safety"@en ;
+  skos:broader :Traffic .
