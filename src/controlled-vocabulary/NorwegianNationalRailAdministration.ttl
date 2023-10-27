@@ -2,7 +2,14 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
+:NNRAMCV a skos:ConceptScheme;
+  dcterms:title "Jernbaneverkets kontrollert vokabular"@nb ;
+  dcterms:title "Jernbaneverkets kontrollert vokabular"@nn ;
+  dcterms:title "Norwegian national rail administration museums controlled vocabulary"@en .
+
+
 :General a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "General" ;
   skos:prefLabel "Allment om jernbane"@nb ;
   skos:prefLabel "Allment om jernbane"@nn ;
@@ -11,6 +18,7 @@
                  :PlansStrategiesAndInvestigations, :Journals, :PrintedMatter, :ReportsAndStatistics .
 
 :Miscellaneous a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Miscellaneous" ;
   skos:prefLabel "Diverse (all)"@nb ;
   skos:prefLabel "Ymse"@nn;
@@ -18,6 +26,7 @@
   skos:broader :General .
 
 :FactsheetsAndBrochures a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "FactsheetsAndBrochures" ;
   skos:prefLabel "Fakta-ark og brosjyrer (all)"@nb ;
   skos:prefLabel "Fakta-ark og brosjyrer (all)"@nn;
@@ -26,6 +35,7 @@
 
 
 :LawsRulesAndRegulations a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "LawsRulesAndRegulations" ;
   skos:prefLabel "Lover, regelverk og forskrifter"@nb ;
   skos:prefLabel "Lover, regelverk og forskrifter"@nn;
@@ -33,6 +43,7 @@
   skos:broader :General .
 
 :PlansStrategiesAndInvestigations a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "PlansStrategiesAndInvestigations" ;
   skos:prefLabel "Planer, strategier og utredninger"@nb ;
   skos:prefLabel "Planar, strategiar og utreiinger"@nn;
@@ -40,6 +51,7 @@
   skos:broader :General .
 
 :Journals a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Journals" ;
   skos:prefLabel "Tidsskrifter"@nb ;
   skos:prefLabel "Tisskrift"@nn;
@@ -47,6 +59,7 @@
   skos:broader :General .
 
 :PrintedMatter a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "PrintedMatter" ;
   skos:prefLabel "Trykk"@nb ;
   skos:prefLabel "Trykk"@nn;
@@ -54,6 +67,7 @@
   skos:broader :General .
 
 :ReportsAndStatistics a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "ReportsAndStatistics" ;
   skos:prefLabel "Årsmeldinger og statistikk"@nb ;
   skos:prefLabel "Årsmeldinger og statistikk"@nn;
@@ -61,6 +75,7 @@
   skos:broader :General .
 
 :Banestrekninger a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Banestrekninger" ;
   skos:prefLabel "Banestrekninger"@nb ;
   skos:prefLabel "Banestrekninger"@nn ;
@@ -69,6 +84,7 @@
                 :Nordlandsbanen, :Roerosbanen, :Soerlandsbanen, :Vestfoldbanen, :Oestfoldbanen .
 
 :Bergensbanen a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Bergensbanen" ;
   skos:prefLabel "Bergensbanen"@nb ;
   skos:prefLabel "Bergensbanen"@nn ;
@@ -76,6 +92,7 @@
   skos:broader :Banestrekninger .
 
 :Dovrebanen a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Dovrebanen" ;
   skos:prefLabel "Dovrebanen"@nb ;
   skos:prefLabel "Dovrebanen"@nn ;
@@ -83,6 +100,7 @@
   skos:broader :Banestrekninger .
 
 :Drammenbanen a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Drammenbanen" ;
   skos:prefLabel "Drammenbanen"@nb ;
   skos:prefLabel "Drammenbanen"@nn ;
@@ -90,6 +108,7 @@
   skos:broader :Banestrekninger .
 
 :Gjoevikbanen a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Gjoevikbanen" ;
   skos:prefLabel "Gjøvikbanen"@nb ;
   skos:prefLabel "Gjøvikbanen"@nn ;
@@ -97,6 +116,7 @@
   skos:broader :Banestrekninger .
 
 :Hovedbanen a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Hovedbanen" ;
   skos:prefLabel "Hovedbanen"@nb ;
   skos:prefLabel "Hovedbanen"@nn ;
@@ -104,6 +124,7 @@
   skos:broader :Banestrekninger .
 
 :Nordlandsbanen a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Nordlandsbanen" ;
   skos:prefLabel "Nordlandsbanen"@nb ;
   skos:prefLabel "Nordlandsbanen"@nn ;
@@ -111,6 +132,7 @@
   skos:broader :Banestrekninger .
 
 :Roerosbanen a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Roerosbanen" ;
   skos:prefLabel "Rørosbanen"@nb ;
   skos:prefLabel "Rørosbanen"@nn ;
@@ -118,6 +140,7 @@
   skos:broader :Banestrekninger .
 
 :Soerlandsbanen a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Soerlandsbanen" ;
   skos:prefLabel "Sørlandsbanen"@nb ;
   skos:prefLabel "Sørlandsbanen"@nn ;
@@ -125,6 +148,7 @@
   skos:broader :Banestrekninger .
 
 :Vestfoldbanen a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Vestfoldbanen" ;
   skos:prefLabel "Vestfoldbanen"@nb ;
   skos:prefLabel "Vestfoldbanen"@nn ;
@@ -132,6 +156,7 @@
   skos:broader :Banestrekninger .
 
 :Oestfoldbanen a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Oestfoldbanen" ;
   skos:prefLabel "Østfoldbanen"@nb ;
   skos:prefLabel "Østfoldbanen"@nn ;
@@ -139,6 +164,7 @@
   skos:broader :Banestrekninger .
 
 :FreightTransport a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "FreightTransport" ;
   skos:prefLabel "Godstransport"@nb ;
   skos:prefLabel "Godstransport"@nn ;
@@ -146,6 +172,7 @@
   skos:narrower :FreightTerminals, :FreightTraffic .
 
 :FreightTerminals a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "FreightTerminals" ;
   skos:prefLabel "Godsterminaler"@nb ;
   skos:prefLabel "Godsterminalar"@nn ;
@@ -153,6 +180,7 @@
   skos:broader :FreightTransport .
 
 :FreightTraffic a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "FreightTraffic" ;
   skos:prefLabel "Godstrafikk"@nb ;
   skos:prefLabel "Godstrafikk"@nn ;
@@ -161,6 +189,7 @@
 
 
 :HighSpeedTracks a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "HighSpeedTracks" ;
   skos:prefLabel "Høyhastighetsbaner"@nb ;
   skos:prefLabel "Høyhastighetsbaner"@nn ;
@@ -168,6 +197,7 @@
   skos:narrower :HighSpeedInvestigations, :Intercity .
 
 :HighSpeedInvestigations a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "HighSpeedInvestigations" ;
   skos:prefLabel "Høyhastighetsutredninger"@nb ;
   skos:prefLabel "Høyhastighetsutredninger"@nn ;
@@ -175,6 +205,7 @@
   skos:broader :HighSpeedTracks .
 
 :Intercity a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Intercity" ;
   skos:prefLabel "Intercity"@nb ;
   skos:prefLabel "Intercity"@nn ;
@@ -182,6 +213,7 @@
   skos:broader :HighSpeedTracks .
 
 :Driveway a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Driveway" ;
   skos:prefLabel "Kjørevegen"@nb ;
   skos:prefLabel "Kjørevegen"@nn ;
@@ -189,6 +221,7 @@
   skos:narrower :RailwayTechnology, :SignalSystems, :TracksSubAndSuperstructure, :PowerSupply, :Communications .
 
 :RailwayTechnology a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "RailwayTechnology" ;
   skos:prefLabel "Jernbaneteknikk (diverse)"@nb ;
   skos:prefLabel "Jernbaneteknikk (ymse)"@nn ;
@@ -196,6 +229,7 @@
   skos:broader :Driveway .
 
 :SignalSystems a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "SignalSystems" ;
   skos:prefLabel "Signalanlegg"@nb ;
   skos:prefLabel "Signalanlegg"@nn ;
@@ -203,6 +237,7 @@
   skos:broader :Driveway .
 
 :TracksSubAndSuperstructure a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "TracksSubAndSuperstructure" ;
   skos:prefLabel "Sporet; under- og overbygning"@nb ;
   skos:prefLabel "Sporet; under- og overbygning"@nn ;
@@ -210,6 +245,7 @@
   skos:broader :Driveway .
 
 :PowerSupply a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "PowerSupply" ;
   skos:prefLabel "Strømforsyning"@nb ;
   skos:prefLabel "Strømforsyning"@nn ;
@@ -217,6 +253,7 @@
   skos:broader :Driveway .
 
 :Communications a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Communications" ;
   skos:prefLabel "Tele og data"@nb ;
   skos:prefLabel "Tele og data"@nn ;
@@ -225,6 +262,7 @@
 
 
 :NatureAndEnvironment a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "NatureAndEnvironment" ;
   skos:prefLabel "Natur og miljø"@nb ;
   skos:prefLabel "Natur og miljø"@nn ;
@@ -232,6 +270,7 @@
   skos:narrower :FloraAndFauna, :Pollution, :Geosciences, :EnvironmentalReports, :Noise .
 
 :FloraAndFauna a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "FloraAndFauna" ;
   skos:prefLabel "Fauna og flora"@nb ;
   skos:prefLabel "Fauna og flora"@nn ;
@@ -239,6 +278,7 @@
   skos:broader :NatureAndEnvironment .
 
 :Pollution a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Pollution" ;
   skos:prefLabel "Forurensning"@nb ;
   skos:prefLabel "Forureining"@nn ;
@@ -246,6 +286,7 @@
   skos:broader :NatureAndEnvironment .
 
 :Geosciences a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Geosciences" ;
   skos:prefLabel "Geovitenskaper"@nb ;
   skos:prefLabel "Geovitskap"@nn ;
@@ -253,6 +294,7 @@
   skos:broader :NatureAndEnvironment .
 
 :EnvironmentalReports a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "EnvironmentalReports" ;
   skos:prefLabel "Miljørapporter"@nb ;
   skos:prefLabel "Miljørapportar"@nn ;
@@ -260,6 +302,7 @@
   skos:broader :NatureAndEnvironment .
 
 :Noise a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Noise" ;
   skos:prefLabel "Støy"@nb ;
   skos:prefLabel "Støy"@nn ;
@@ -267,6 +310,7 @@
   skos:broader :NatureAndEnvironment .
 
 :RollingStock a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "RollingStock" ;
   skos:prefLabel "Rullende materiell"@nb ;
   skos:prefLabel "Rullende materiell"@nn ;
@@ -274,6 +318,7 @@
   skos:narrower :Locomotives, :PassengerAndFreightCarriages, :MaintenanceAndWorkshops .
 
 :Locomotives a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Locomotives" ;
   skos:prefLabel "Lokomotiver"@nb ;
   skos:prefLabel "Lokomotiv"@nn ;
@@ -281,6 +326,7 @@
   skos:broader :RollingStock .
 
 :PassengerAndFreightCarriages a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "PassengerAndFreightCarriages" ;
   skos:prefLabel "Person- og godsvogner"@nb ;
   skos:prefLabel "Person- og godsvagnar"@nn ;
@@ -288,6 +334,7 @@
   skos:broader :RollingStock .
 
 :MaintenanceAndWorkshops a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "MaintenanceAndWorkshops" ;
   skos:prefLabel "Vedlikehold og verksteder"@nb ;
   skos:prefLabel "Vedlikehald og verkstadar"@nn ;
@@ -295,6 +342,7 @@
   skos:broader :RollingStock .
 
 :ParliamentaryNegotiations a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "ParliamentaryNegotiations" ;
   skos:prefLabel "Stortingsforhandlinger"@nb ;
   skos:prefLabel "Stortingsforhandlinger"@nn ;
@@ -302,6 +350,7 @@
   skos:narrower :2013_2014, :2014_2015, :2015_2016, :2016_2017 .
 
 :2013_2014 a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "2013_2014" ;
   skos:prefLabel "2013–2014"@nb ;
   skos:prefLabel "2013–2014"@nn ;
@@ -309,6 +358,7 @@
   skos:broader :ParliamentaryNegotiations .
 
 :2014_2015 a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "2014_2015" ;
   skos:prefLabel "2014–2015"@nb ;
   skos:prefLabel "2014–2015"@nn ;
@@ -316,6 +366,7 @@
   skos:broader :ParliamentaryNegotiations .
 
 :2015_2016 a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "2015_2016" ;
   skos:prefLabel "2015–2016"@nb ;
   skos:prefLabel "2015–2016"@nn ;
@@ -323,6 +374,7 @@
   skos:broader :ParliamentaryNegotiations .
 
 :2016_2017 a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "2016_2017" ;
   skos:prefLabel "2016–2017"@nb ;
   skos:prefLabel "2016–2017"@nn ;
@@ -330,6 +382,7 @@
   skos:broader :ParliamentaryNegotiations .
 
 :TariffProtocols a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "TariffProtocols" ;
   skos:prefLabel "Takstprotokoller"@nb ;
   skos:prefLabel "Takstprotokollar"@nn ;
@@ -345,6 +398,7 @@
                 :TariffProtocol_Oestfoldbanen_Sydbanen_Smaalensbanen_Oestre_linie_1874_1989 .
 
 :TariffProtocol_Bergensbanen_Randsfjordbanen_1863_1921 a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "TariffProtocol_Bergensbanen_Randsfjordbanen_1863_1921" ;
   skos:prefLabel "Bergensbanen. Randsfjordbanen. 1863-1921"@nb ;
   skos:prefLabel "Bergensbanen. Randsfjordbanen. 1863-1921"@nn ;
@@ -352,6 +406,7 @@
   skos:broader :TariffProtocols .
 
 :TariffProtocol_Dovrebanen_Hamar_Selbanen_Otta_Dombaasbanen_Raumabanen_1891_1950 a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "TariffProtocol_Dovrebanen_Hamar_Selbanen_Otta_Dombaasbanen_Raumabanen_1891_1950" ;
   skos:prefLabel "Dovrebanen. Hamar-Selbanen. Otta-Dombåsbanen. Raumabanen. 1891-1950"@nb ;
   skos:prefLabel "Dovrebanen. Hamar-Selbanen. Otta-Dombåsbanen. Raumabanen. 1891-1950"@nn ;
@@ -359,6 +414,7 @@
   skos:broader :TariffProtocols .
 
 :TariffProtocol_Dovrebanen_Hovedbanen_Christiania_Eidsvold_1854_1960 a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "TariffProtocol_Dovrebanen_Hovedbanen_Christiania_Eidsvold_1854_1960" ;
   skos:prefLabel "Dovrebanen. Hovedbanen (Christiania - Eidsvold). 1854-1960"@nb ;
   skos:prefLabel "Dovrebanen. Hovedbanen (Christiania - Eidsvold). 1854-1960"@nn ;
@@ -366,6 +422,7 @@
   skos:broader :TariffProtocols .
 
 :TariffProtocol_Drammenbanen_Kristiania_Drammen_1870_1986 a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "TariffProtocol_Drammenbanen_Kristiania_Drammen_1870_1986" ;
   skos:prefLabel "Drammenbanen (Kristiania-Drammen). 1870-1986"@nb ;
   skos:prefLabel "Drammenbanen (Kristiania-Drammen). 1870-1986"@nn ;
@@ -373,6 +430,7 @@
   skos:broader :TariffProtocols .
 
 :TariffProtocol_Gjoevikbanen_Valdresbanen_Eina_Fagernes_Alnabanen_1896_1960 a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "TariffProtocol_Gjoevikbanen_Valdresbanen_Eina_Fagernes_Alnabanen_1896_1960" ;
   skos:prefLabel "Gjøvikbanen. Valdresbanen (Eina-Fagernes). Alnabanen. 1896-1960 (Inkluderer: Forbindelsen Roa-Hønefoss (Bergensbanen østenfjelds). Røykenvikbanen, Skreiabanen (Reinsvollbanen))"@nb ;
   skos:prefLabel "Gjøvikbanen. Valdresbanen (Eina-Fagernes). Alnabanen. 1896-1960 (Inkluderer: Forbindelsen Roa-Hønefoss (Bergensbanen østenfjelds). Røykenvikbanen, Skreiabanen (Reinsvollbanen))"@nn ;
@@ -380,6 +438,7 @@
   skos:broader :TariffProtocols .
 
 :TariffProtocol_Kongsvingerbanen_Soloerbanen_Kongsvinger_Flisenbanen_Flisen_Elverumsbanen a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "TariffProtocol_Kongsvingerbanen_Soloerbanen_Kongsvinger_Flisenbanen_Flisen_Elverumsbanen" ;
   skos:prefLabel "Kongsvingerbanen.Solørbanen (Kongsvinger-Flisenbanen, Flisen-Elverumsbanen) 1858-1974 (Inkluderer: Vestmarkalinjen (Skotterud-Vestmarka). Urskog-Hølandsbanen)"@nb ;
   skos:prefLabel "Kongsvingerbanen.Solørbanen (Kongsvinger-Flisenbanen, Flisen-Elverumsbanen) 1858-1974 (Inkluderer: Vestmarkalinjen (Skotterud-Vestmarka). Urskog-Hølandsbanen)"@nn ;
@@ -387,6 +446,7 @@
   skos:broader :TariffProtocols .
 
 :TariffProtocol_Roerosbanen_i_Hedmark_amt_fylke_og_i_Akershus_Hamar_Elverum_Jernbanen_1858_2008 a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "TariffProtocol_Roerosbanen_i_Hedmark_amt_fylke_og_i_Akershus_Hamar_Elverum_Jernbanen_1858_2008" ;
   skos:prefLabel "Rørosbanen i Hedmark amt/fylke og i Akershus. Hamar-Elverum-Jernbanen, 1858-2008 (Inkluderer: Grundset-Aamot Jernbanen, Støren-Aamot Jernbaneanlæg, Hamar-Eidsvoldbanen (Hedemarksbanen))"@nb ;
   skos:prefLabel "Rørosbanen i Hedmark amt/fylke og i Akershus. Hamar-Elverum-Jernbanen, 1858-2008 (Inkluderer: Grundset-Aamot Jernbanen, Støren-Aamot Jernbaneanlæg, Hamar-Eidsvoldbanen (Hedemarksbanen))"@nn ;
@@ -394,6 +454,7 @@
   skos:broader :TariffProtocols .
 
 :TariffProtocol_Soerlandsbanen_Vestfoldbanen_Randsfjordbanen_Hokksund_Kongsberg_1870_1951 a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "TariffProtocol_Soerlandsbanen_Vestfoldbanen_Randsfjordbanen_Hokksund_Kongsberg_1870_1951" ;
   skos:prefLabel "Sørlandsbanen. Vestfoldbanen. Randsfjordbanen (Hokksund-Kongsberg). 1870-1951 (Inkluderer: Bratsbergbanen (Nordagutu-Porsgrunn))"@nb ;
   skos:prefLabel "Sørlandsbanen. Vestfoldbanen. Randsfjordbanen (Hokksund-Kongsberg). 1870-1951 (Inkluderer: Bratsbergbanen (Nordagutu-Porsgrunn))"@nn ;
@@ -401,6 +462,7 @@
   skos:broader :TariffProtocols .
 
 :TariffProtocol_Oestfoldbanen_Sydbanen_Smaalensbanen_Oestre_linie_1874_1989 a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "TariffProtocol_Oestfoldbanen_Sydbanen_Smaalensbanen_Oestre_linie_1874_1989" ;
   skos:prefLabel "Østfoldbanen (Sydbanen, Smaalensbanen, Østre linie). 1874-1989"@nb ;
   skos:prefLabel "Østfoldbanen (Sydbanen, Smaalensbanen, Østre linie). 1874-1989"@nn ;
@@ -408,6 +470,7 @@
   skos:broader :TariffProtocols .
 
 :Traffic a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Traffic" ;
   skos:prefLabel "Trafikk"@nb ;
   skos:prefLabel "Trafikk"@nn ;
@@ -415,6 +478,7 @@
   skos:narrower :Capacity, :Customers, :NetworkStatement, :Punctuality, :Timetables, :Safety .
 
 :Capacity a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Capacity" ;
   skos:prefLabel "Kapasitet"@nb ;
   skos:prefLabel "Kapasitet"@nn ;
@@ -422,6 +486,7 @@
   skos:broader :Traffic .
 
 :Customers a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Customers" ;
   skos:prefLabel "Kunder"@nb ;
   skos:prefLabel "Kunder"@nn ;
@@ -429,6 +494,7 @@
   skos:broader :Traffic .
 
 :NetworkStatement a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "NetworkStatement" ;
   skos:prefLabel "Network Statement"@nb ;
   skos:prefLabel "Network Statement"@nn ;
@@ -436,6 +502,7 @@
   skos:broader :Traffic .
 
 :Punctuality a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Punctuality" ;
   skos:prefLabel "Punktlighet"@nb ;
   skos:prefLabel "Punktlighet"@nn ;
@@ -443,6 +510,7 @@
   skos:broader :Traffic .
 
 :Timetables a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Timetables" ;
   skos:prefLabel "Rutetabeller"@nb ;
   skos:prefLabel "Rutetabellar"@nn ;
@@ -450,6 +518,7 @@
   skos:broader :Traffic .
 
 :Safety a skos:Concept ;
+  skos:inScheme :NNRAMCV ;
   dcterms:identifier "Safety" ;
   skos:prefLabel "Sikkerhet"@nb ;
   skos:prefLabel "Tryggleik"@nn ;
