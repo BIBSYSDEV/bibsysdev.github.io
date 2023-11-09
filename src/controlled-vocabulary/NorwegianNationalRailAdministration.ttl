@@ -313,7 +313,7 @@
   skos:inScheme :NNRAMCV ;
   dcterms:identifier "RollingStock" ;
   skos:prefLabel "Rullende materiell"@nb ;
-  skos:prefLabel "Rullende materiell"@nn ;
+  skos:prefLabel "Rullande materiell"@nn ;
   skos:prefLabel "RollingStock"@en ;
   skos:narrower :Locomotives, :PassengerAndFreightCarriages, :MaintenanceAndWorkshops .
 
@@ -329,7 +329,7 @@
   skos:inScheme :NNRAMCV ;
   dcterms:identifier "PassengerAndFreightCarriages" ;
   skos:prefLabel "Person- og godsvogner"@nb ;
-  skos:prefLabel "Person- og godsvagnar"@nn ;
+  skos:prefLabel "Person- og godsvogner"@nn ;
   skos:prefLabel "Passenger and freight carriages"@en ;
   skos:broader :RollingStock .
 
