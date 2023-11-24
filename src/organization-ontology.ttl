@@ -11,3 +11,10 @@ organization:hasPart a rdf:Property ;
   rdfs:domain organization:Organization ;
   rdfs:range organization:Organization .
 
+organization:partOf a rdf:Property ;
+  rdfs:label "partOf" ;
+  rdfs:comment "A super-part of an organization" ;
+  rdfs:isDefinedBy organization: ;
+  rdfs:domain organization:Organization ;
+  rdfs:range organization:Organization .
+
