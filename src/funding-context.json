@@ -3,8 +3,8 @@
     "@vocab": "http://bibsysdev.github.io/src/funding-ontology.ttl#",
     "id": "@id",
     "type": "@type",
-    "alternativeNames": {
-      "@id": "alternativeName",
+    "labels": {
+      "@id": "labels",
       "@container": "@language"
     },
     "activeFrom": {
