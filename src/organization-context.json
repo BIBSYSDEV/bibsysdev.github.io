@@ -1,6 +1,5 @@
 {
   "@context": {
-    "@vocab": "https://bibsysdev.github.io/src/organization-ontology.ttl#",
     "Organization": "https://nva.sikt.no/ontology/publication#Organization",
     "id": "@id",
     "type": "@type",
@@ -19,6 +18,9 @@
     "partOf": {
       "@id": "https://nva.sikt.no/ontology/publication#partOf",
       "@container": "@set"
+    },
+    "country": {
+      "@id": "https://nva.sikt.no/ontology/publication#country"
     }
   }
 }
