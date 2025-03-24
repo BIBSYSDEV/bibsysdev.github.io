@@ -1,0 +1,34 @@
+{
+  "@context": {
+    "@vocab": "https://nva.sikt.no/ontology/publication#",
+    "id": "@id",
+    "type": "@type",
+    "awards": {
+      "@id": "award",
+      "@container": "@set"
+    },
+    "countries": {
+      "@id": "country",
+      "@container": "@set"
+    },
+    "identifiers": {
+      "@id": "identifier",
+      "@container": "@set"
+    },
+    "keywords": {
+      "@id": "keyword",
+      "@container": "@set"
+    },
+    "labels": {
+      "@id": "label",
+      "@container": "@language"
+    },
+    "names": {
+      "@id": "name",
+      "@container": "@set"
+    },
+    "organization": {
+      "@type": "@id"
+    }
+  }
+}
