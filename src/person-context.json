@@ -23,11 +23,27 @@
       "@id": "label",
       "@container": "@language"
     },
+    "label": {
+      "@id": "label",
+      "@container": "@language"
+    },
     "names": {
       "@id": "name",
       "@container": "@set"
     },
     "organization": {
+      "@type": "@id"
+    },
+    "background": {
+      "@container": "@language"
+    },
+    "collaboration": {
+      "@container": "@language"
+    },
+    "place": {
+      "@container": "@language"
+    },
+    "image": {
       "@type": "@id"
     }
   }
