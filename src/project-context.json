@@ -1,11 +1,18 @@
 {
   "@context": {
     "@vocab": "https://example.org/project-ontology.ttl#",
-    "nva": "http://bibsysdev.github.io/src/nva.ttl#",
+    "nva": "https://nva.sikt.no/ontology/publication#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "id": "@id",
     "type": "@type",
-    "name": {
+    "labels": {
+      "@id": "label",
+      "@container": "@language"
+    },
+    "academicSummary": {
+      "@container": "@language"
+    },
+    "popularScientificSummary": {
       "@container": "@language"
     },
     "endDate": {
@@ -14,12 +21,21 @@
     "startDate": {
       "@type": "xsd:timestamp"
     },
+    "date": {
+      "@type": "xsd:timestamp"
+    },
     "contributors": {
       "@id": "contributor",
       "@container": "@set"
     },
     "language": {
       "@type": "@id"
+    },
+    "alternativeTitles": {
+      "@id": "alternativeTitle"
+    },
+    "identifiers": {
+      "@id": "identifier"
     },
     "Organization": "nva:Organization"
   }
