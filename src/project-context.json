@@ -37,6 +37,9 @@
     "identifiers": {
       "@id": "identifier"
     },
+    "source": {
+      "@type": "@id"
+    },
     "Organization": "nva:Organization"
   }
 }
