@@ -1,0 +1,48 @@
+@prefix fundingSource: <http://bibsysdev.github.io/src/funding-source-ontology.ttl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Define the FundingSource class
+fundingSource:FundingSource a rdfs:Class ;
+  rdfs:label "Funding Source" ;
+  rdfs:comment "An entity or organization that provides funds for research or other activities" ;
+  rdfs:isDefinedBy fundingSource: .
+
+# Define the Identifier class
+fundingSource:Identifier a rdfs:Class ;
+  rdfs:label "Identifier" ;
+  rdfs:comment "An identifier that uniquely identifies a funding source" ;
+  rdfs:isDefinedBy fundingSource: .
+
+# Define the property for identifier
+fundingSource:identifier a rdf:Property ;
+  rdfs:label "identifier" ;
+  rdfs:comment "Property that relates a funding source to its unique identifier" ;
+  rdfs:domain fundingSource:FundingSource ;
+  rdfs:range fundingSource:Identifier ;
+  rdfs:isDefinedBy fundingSource: .
+
+# Define the property for name
+fundingSource:name a rdf:Property ;
+  rdfs:label "name" ;
+  rdfs:comment "The name of the funding source" ;
+  rdfs:domain fundingSource:FundingSource ;
+  rdfs:range rdf:langString ;
+  rdfs:isDefinedBy fundingSource: .
+
+# Define the property for labels
+fundingSource:label a rdf:Property ;
+  rdfs:label "label" ;
+  rdfs:comment "A set of human-readable labels for the funding source in multiple languages" ;
+  rdfs:domain fundingSource:FundingSource ;
+  rdfs:range rdf:langString ;
+  rdfs:isDefinedBy fundingSource: .
+
+# Define the property for ID
+fundingSource:id a rdf:Property ;
+  rdfs:label "id" ;
+  rdfs:comment "A unique IRI that identifies the funding source" ;
+  rdfs:domain fundingSource:FundingSource ;
+  rdfs:range xsd:anyURI ;
+  rdfs:isDefinedBy fundingSource: .
