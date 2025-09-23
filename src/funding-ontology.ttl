@@ -35,14 +35,7 @@ funding:identifier a rdf:Property ;
   rdfs:domain funding:Funding ;
   rdfs:range :Identifier .
 
-funding:name a rdf:Property ;
-  rdfs:label "name" ;
-  rdfs:comment "A token by which a thing is known" ;
-  rdfs:isDefinedBy funding: ;
-  rdfs:domain rdfs:Class ;
-  rdfs:range xsd:string .
-
-funding:alternativeName a rdf:Property ;
+funding:labels a rdf:Property ;
   rdfs:comment "" ;
   rdfs:label "" ;
   rdfs:isDefinedBy funding: ;
