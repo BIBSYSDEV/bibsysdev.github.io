@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "@vocab": "http://bibsysdev.github.io/src/funding-source-ontology.ttl#",
+    "id": "@id",
+    "type": "@type",
+    "labels": {
+      "@id": "label",
+      "@container": "@language"
+    },
+    "name": {
+      "@id": "name",
+      "@container": "@language"
+    },
+    "identifier": {
+      "@id": "identifier"
+    }
+  }
+}
