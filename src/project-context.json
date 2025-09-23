@@ -1,7 +1,6 @@
 {
   "@context": {
-    "@vocab": "https://example.org/project-ontology.ttl#",
-    "nva": "https://nva.sikt.no/ontology/publication#",
+    "@vocab": "https://nva.sikt.no/ontology/publication#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "id": "@id",
     "type": "@type",
@@ -39,7 +38,6 @@
     },
     "source": {
       "@type": "@id"
-    },
-    "Organization": "nva:Organization"
+    }
   }
 }
