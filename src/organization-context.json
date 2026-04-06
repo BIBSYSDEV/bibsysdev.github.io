@@ -16,7 +16,6 @@
       "@container": "@language"
     },
     "partOf": {
-      "@id": "https://nva.sikt.no/ontology/publication#partOf",
       "@container": "@set"
     },
     "country": {
