@@ -1,4 +1,4 @@
-@prefix : <http://bibsysdev.github.io/src/project-ontology#> .
+@prefix : <http://bibsysdev.github.io/src/project-ontology.ttl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix nva: <http://bibsysdev.github.io/src/nva#> . # does not exist
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -44,22 +44,22 @@
   rdfs:range xsd:string .
 
 :academicSummary a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "A summary of the project written for an academic audience" ;
   rdfs:domain :Project ;
   rdfs:range rdf:langString .
 
 :popularScientificSummary a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "A summary of the project written in plain language for a general audience" ;
   rdfs:domain :Project ;
   rdfs:range rdf:langString .
 
 :method a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "A description of the research methods by which the project is carried out" ;
   rdfs:domain :Project ;
   rdfs:range rdf:langString .
 
 :equipment a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "A description of the scientific equipment and infrastructure used in the project" ;
   rdfs:domain :Project ;
   rdfs:range rdf:langString .
 
@@ -79,12 +79,24 @@
   rdfs:range xsd:dateTime .
 
 :Status a owl:Class ;
+  rdfs:comment "The stage that a project has reached in its lifetime" ;
   owl:oneOf ( :NOTSTARTED :ACTIVE :CONCLUDED ) .
+
+:ApprovalStatus a owl:Class ;
+  rdfs:comment "The state that an application for approval has reached" ;
+  owl:oneOf ( :NOT_APPLIED :APPLIED :APPROVED :DECLINED :REJECTED ) .
 
 :status a rdf:Property ;
   rdfs:comment "The status of the project" ;
   rdfs:domain :Project ;
   rdfs:range :Status .
+
+:approvalStatus a rdf:Property ;
+  rdfs:comment """Relates an approval to the state its application has reached. The payload carries
+    this under the key 'status' on an Approval node, which the type-scoped mapping for
+    Approval in the context separates from the project's own :status.""" ;
+  rdfs:domain :Approval ;
+  rdfs:range :ApprovalStatus .
 
 :published a rdf:Property ;
   rdfs:comment "Whether the project is published or not" ;
@@ -105,13 +117,14 @@
   rdfs:comment "A combination of a date and source short name" .
 
 :sourceShortName a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "The short name of the system or register that supplied the date, for example 'REK' or 'NVA'" ;
   rdfs:domain :DateInfo ;
   rdfs:range xsd:string .
 
 :date a rdf:Property ;
-  rdfs:comment "A specific time" ;
-  rdfs:domain :DateInfo ;
+  rdfs:comment """A specific time: the moment recorded by a DateInfo, or the moment at which an
+    approval was decided.""" ;
+  rdfs:domain [ a owl:Class ; owl:unionOf ( :DateInfo :Approval ) ] ;
   rdfs:range xsd:dateTime .
 
 :created a rdf:Property ;
@@ -134,6 +147,12 @@
   rdfs:domain :Project ;
   rdfs:range :ExternalSource .
 
+:name a rdf:Property ;
+  rdfs:comment """The short name of the register in which the project is also registered, for
+    example 'REK'.""" ;
+  rdfs:domain :ExternalSource ;
+  rdfs:range xsd:string .
+
 :Funding a rdfs:Class ;
   owl:sameAs <http://bibsysdev.github.io/src/funding-ontology#Funding> ;
   rdfs:comment "A project or an entity that provides funding for the project" .
@@ -144,28 +163,28 @@
   rdfs:subClassOf :Funding .
 
 :funding a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "Relates a project to funding that it has received" ;
   rdfs:domain :Project ;
   rdfs:range :Funding .
 
 :source a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "The register of funding sources from which the funding originates" ;
   rdfs:domain :Funding ;
   rdfs:range xsd:anyURI .
 
 :FundingAmount a rdfs:Class ;
   owl:sameAs <http://bibsysdev.github.io/src/funding-ontology#MonetaryAmount> ;
-  rdfs:comment "" .
+  rdfs:comment "A sum of money expressed as a value in a given currency" .
 
 :fundingAmount a rdf:Property ;
   owl:sameAs <http://bibsysdev.github.io/src/funding-ontology#amount> ;
-  rdfs:comment "" ;
+  rdfs:comment "The monetary amount funding the project" ;
   rdfs:domain :Project ;
   rdfs:range :FundingAmount .
 
 :currency a rdf:Property ;
   owl:sameAs <http://bibsysdev.github.io/src/funding-ontology#currency> ;
-  rdfs:comment "" ;
+  rdfs:comment "The currency in which a monetary amount is expressed, as a three-letter ISO 4217 code, for example 'NOK'" ;
   rdfs:domain :FundingAmount ;
   rdfs:range xsd:string .
 
@@ -178,6 +197,7 @@
   rdfs:range :FundingStream .
 
 :Funder a rdfs:Class ;
+  rdfs:comment "An organization that provides the money carried by a funding stream" ;
   rdfs:subClassOf nva:Organization .
 
 :funder a rdf:Property ;
@@ -213,7 +233,9 @@
   rdfs:range nva:Organization .
 
 :institutionResponsibleForResearch a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment """An organization carrying responsibility for the research performed in the
+    project. Unlike the coordinating institution, there may be several of these and
+    their responsibility is scientific rather than administrative.""" ;
   rdfs:domain :Project ;
   rdfs:range nva:Organization .
 
@@ -230,7 +252,7 @@
   rdfs:subClassOf :Contributor .
 
 :LocalProjectManager a rdfs:Class ;
-  rdfs:comment "" ;
+  rdfs:comment "A contributor with responsibility for managing the project's work at one of the participating organizations" ;
   rdfs:subClassOf :Contributor .
 
 :ProjectParticipant a rdfs:Class ;
@@ -238,11 +260,11 @@
   rdfs:subClassOf :Contributor .
 
 :ProjectCreator a rdfs:Class ;
-  rdfs:comment "" ;
+  rdfs:comment "A contributor who registered the project" ;
   rdfs:subClassOf :Contributor .
 
 :creator a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "Relates a project to the contributor who registered it" ;
   rdfs:domain :Project ;
   rdfs:range :ProjectCreator .
 
@@ -257,12 +279,14 @@
   rdfs:subClassOf foaf:Person, schema:Person .
 
 :firstName a rdf:Property ;
-  rdfs:comment "" ;
+  owl:equivalentProperty foaf:firstName ;
+  rdfs:comment "The given name or names of a person" ;
   rdfs:domain :Person ;
   rdfs:range xsd:string .
 
 :lastName a rdf:Property ;
-  rdfs:comment "" ;
+  owl:equivalentProperty foaf:lastName ;
+  rdfs:comment "The family name of a person" ;
   rdfs:domain :Person ;
   rdfs:range xsd:string .
 
@@ -272,99 +296,99 @@
   rdfs:range nva:Organization .
 
 :ContactInfo a rdfs:Class ;
-  rdfs:comment "" .
+  rdfs:comment """A point of contact for enquiries about the project, stated as free text rather
+    than as references to registered people and organizations.""" .
 
 :contactInfo a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "Relates a project to its point of contact for enquiries" ;
   rdfs:domain :Project ;
   rdfs:range :ContactInfo .
 
 :contactPerson a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "The name of the person to contact about the project" ;
   rdfs:domain :ContactInfo ;
   rdfs:range xsd:string .
 
 :organization a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "The name of the organization at which the contact person can be reached" ;
   rdfs:domain :ContactInfo ;
   rdfs:range xsd:string .
 
 :email a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "An email address at which a contact can be reached" ;
   rdfs:range xsd:string .
 
 :phone a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "A telephone number at which a contact can be reached" ;
   rdfs:range xsd:string .
 
 # Classification. The payload puts the category and keyword codes in the @type position,
 # so a node's type is the code itself rather than the class named here.
-
 :ProjectCategory a rdfs:Class ;
-  rdfs:comment "" .
+  rdfs:comment "A classification of the kind of activity that a project represents, for example basic research or a doctoral project" .
 
 :projectCategory a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "Relates a project to a category describing the kind of activity it represents" ;
   rdfs:domain :Project ;
   rdfs:range :ProjectCategory .
 
 :Keyword a rdfs:Class ;
-  rdfs:comment "" .
+  rdfs:comment "A subject term describing what a project is about, drawn from Cristin's keyword register" .
 
 :keyword a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "Relates a project to a subject term describing what it is about" ;
   rdfs:domain :Project ;
   rdfs:range :Keyword .
 
 :HealthProjectData a rdfs:Class ;
-  rdfs:comment "" .
+  rdfs:comment "Details recorded in addition to the general ones for projects that constitute health research" .
 
 :healthProjectData a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "Relates a project to the additional details recorded for health research" ;
   rdfs:domain :Project ;
   rdfs:range :HealthProjectData .
 
 :Drugstudy a rdfs:Class ;
-  rdfs:comment "" ;
+  rdfs:comment "A health project that investigates the effects of a pharmaceutical product" ;
   rdfs:subClassOf :HealthProjectData .
 
 :Otherclin a rdfs:Class ;
-  rdfs:comment "" ;
+  rdfs:comment "A health project that is a clinical study other than a drug study" ;
   rdfs:subClassOf :HealthProjectData .
 
 :Otherstudy a rdfs:Class ;
-  rdfs:comment "" ;
+  rdfs:comment "A health project that is neither a drug study nor another form of clinical study" ;
   rdfs:subClassOf :HealthProjectData .
 
 :clinicalTrialPhase a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "The phase that the clinical trial has reached, one of PhaseI, PhaseII, PhaseIII or PhaseIV" ;
   rdfs:domain :HealthProjectData ;
   rdfs:range xsd:string .
 
 :Approval a rdfs:Class ;
-  rdfs:comment "" .
+  rdfs:comment "A permission granted by an authority for the project to be carried out" .
 
 :approval a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "Relates a project to a permission granted for it" ;
   rdfs:domain :Project ;
   rdfs:range :Approval .
 
 :authority a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "The authority that decided the application for approval, for example 'REK'" ;
   rdfs:domain :Approval ;
   rdfs:range xsd:string .
 
 :authorityName a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "The name of the authority that decided the application for approval" ;
   rdfs:domain :Approval ;
   rdfs:range rdf:langString .
 
 :applicationCode a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "The kind of permission that was applied for" ;
   rdfs:domain :Approval ;
   rdfs:range xsd:string .
 
 :relatedProject a rdf:Property ;
-  rdfs:comment "" ;
+  rdfs:comment "Another project with which this project is associated" ;
   rdfs:domain :Project ;
   rdfs:range :Project .

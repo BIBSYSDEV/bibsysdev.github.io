@@ -86,6 +86,14 @@
     "webPage": {
       "@type": "@id"
     },
-    "Organization": "nva:Organization"
+    "Organization": "nva:Organization",
+    "Approval": {
+      "@id": "Approval",
+      "@context": {
+        "status": {
+          "@id": "approvalStatus"
+        }
+      }
+    }
   }
 }
