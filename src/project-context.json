@@ -1,11 +1,15 @@
 {
   "@context": {
-    "@vocab": "https://example.org/project-ontology.ttl#",
+    "@vocab": "https://bibsysdev.github.io/src/project-ontology.ttl#",
     "nva": "https://nva.sikt.no/ontology/publication#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "id": "@id",
     "type": "@type",
     "labels": {
+      "@id": "label",
+      "@container": "@language"
+    },
+    "label": {
       "@id": "label",
       "@container": "@language"
     },
@@ -15,14 +19,23 @@
     "popularScientificSummary": {
       "@container": "@language"
     },
+    "method": {
+      "@container": "@language"
+    },
+    "equipment": {
+      "@container": "@language"
+    },
+    "authorityName": {
+      "@container": "@language"
+    },
     "endDate": {
-      "@type": "xsd:timestamp"
+      "@type": "xsd:dateTime"
     },
     "startDate": {
-      "@type": "xsd:timestamp"
+      "@type": "xsd:dateTime"
     },
     "date": {
-      "@type": "xsd:timestamp"
+      "@type": "xsd:dateTime"
     },
     "contributors": {
       "@id": "contributor",
@@ -32,12 +45,45 @@
       "@type": "@id"
     },
     "alternativeTitles": {
-      "@id": "alternativeTitle"
+      "@id": "alternativeTitle",
+      "@container": "@set"
     },
     "identifiers": {
-      "@id": "identifier"
+      "@id": "identifier",
+      "@container": "@set"
     },
     "source": {
+      "@type": "@id"
+    },
+    "funding": {
+      "@container": "@set"
+    },
+    "approvals": {
+      "@id": "approval",
+      "@container": "@set"
+    },
+    "externalSources": {
+      "@id": "externalSource",
+      "@container": "@set"
+    },
+    "institutionsResponsibleForResearch": {
+      "@id": "institutionResponsibleForResearch",
+      "@container": "@set"
+    },
+    "keywords": {
+      "@id": "keyword",
+      "@container": "@set"
+    },
+    "projectCategories": {
+      "@id": "projectCategory",
+      "@container": "@set"
+    },
+    "relatedProjects": {
+      "@id": "relatedProject",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "webPage": {
       "@type": "@id"
     },
     "Organization": "nva:Organization"
