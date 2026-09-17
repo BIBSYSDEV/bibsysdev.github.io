@@ -64,18 +64,15 @@
   rdfs:range rdf:langString .
 
 :webPage a rdf:Property ;
-  rdfs:comment "The web page of the project" ;
-  rdfs:domain :Project ;
+  rdfs:comment "A web page" ;
   rdfs:range xsd:anyURI .
 
 :startDate a rdf:Property ;
-  rdfs:comment "The point at which the project was started" ;
-  rdfs:domain :Project ;
+  rdfs:comment "The point at which something was started" ;
   rdfs:range xsd:dateTime .
 
 :endDate a rdf:Property ;
-  rdfs:comment "The point at which the project was terminated" ;
-  rdfs:domain :Project ;
+  rdfs:comment "The point at which something was terminated" ;
   rdfs:range xsd:dateTime .
 
 :Status a owl:Class ;
